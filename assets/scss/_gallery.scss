@@ -1,0 +1,177 @@
+
+
+
+/*===========================
+     06.GALLERY css 
+===========================*/
+
+
+.video-section .top-area {
+    text-align: center;
+    width: 100%;
+    height: 60%;
+    padding: 150px 0;
+    position: inherit; 
+    left: 0;
+    top: 0;
+    position: relative;
+    h2{font-size: 45px;}
+    p{font-size: 20px;}
+    h2, p{color: #fff; position: relative;}
+    &::before{    
+        content: "";
+        background-color: rgba(61, 36, 36, 0.54);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .video-btn{
+        a{
+            position: relative;
+            margin-top: 15px;
+            padding: 10px 8px 10px 10px;
+            -webkit-animation: biilogo-pulse 1s infinite;
+            animation: biilogo-pulse 1s infinite;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 120%;
+                height: 120%;
+                left: -10%;
+                top: -10%;
+                display: inline-flex;                
+                border-radius: 50%; 
+                border: 1px solid #fff;          
+                z-index: 1;
+            }
+        }
+        svg{width: 30px;height: 30px;color: #fff; }
+    } 
+}
+.fancybox-lock body{overflow: hidden !important;}
+.fancybox-overlay-fixed{position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 999;background: rgba(61, 36, 36, 0.54);}
+.fancybox-wrap {
+    iframe{width: 100%; height: 100%;}
+    .fancybox-close{    
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        z-index: 8040;
+        background-image: url(https://phamchuyen.iwedding.info/templates/template7/css/../img/fancybox/fancybox_sprite.png);
+    }
+}
+.gallery_wrapper{
+    margin-top: 30px;
+}
+.gallery_wrapper {
+    .gallery-container {
+        margin: 0 -7.5px;
+    }
+    .grid-item{width:33%;
+        float: left;
+        
+        overflow: hidden;
+        a {
+            margin: 8px;
+            display: block;
+            z-index: 10;
+            img{display: block;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+.single_gallery{
+    position: relative;
+    
+    & .gallery_image{
+        & img{
+            width: 100%;
+        }
+    }
+    & .gallery_content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        
+        &::before{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 0;
+            top: 0;
+            left: 0;
+            background-color: rgba($black, 0.85);
+            @include transition(0.3s);
+        }
+        
+        & .gallery_icon{
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            @include transform(translateY(-50%));
+            
+            & li{
+                display: inline-block;
+                margin: 0 5px;
+                @include transition(0.3s);
+                opacity: 0;
+                visibility: hidden;
+                
+                &:first-child{
+                    @include transform(translateX(-100%));
+                }
+                &:last-child{
+                    @include transform(translateX(100%));
+                }
+                
+                & a{
+                    width: 40px;
+                    height: 40px;
+                    line-height: 36px;
+                    text-align: center;
+                    font-size: 16px;
+                    color: $theme-color;
+                    border: 2px solid $theme-color;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    
+    &:hover{
+        & .gallery_content{
+            &::before{
+                height: 100%;
+            }
+            & .gallery_icon{
+                & li{
+                    @include transform(translateX(0));
+                    @include transition-delay(0.3s);
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
