@@ -106,6 +106,25 @@ p {
   height: 100%;
 }
 
+/*===== All choose-language Style =====*/
+.choose-language{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.choose-language-content{
+  margin-bottom: 15px;
+}
+.choose-language-content .title{
+  font-size: 60px;
+}
+.box-language{
+  margin-inline:10px
+}
+
+
 /*===== All Slick Slide Outline Style =====*/
 .slick-slide {
   outline: 0;

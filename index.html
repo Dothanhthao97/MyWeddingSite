@@ -26,18 +26,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
-        .language-option {
-            display: inline-block;
-            padding: 10px;
-            margin: 5px;
-            border: 1px solid #ccc;
-            cursor: pointer;
-        }
-
-        .language-option:hover {
-            background-color: #f0f0f0;
-        }
-
         .selected {
             background-color: #007bff;
             color: #fff;
@@ -57,14 +45,25 @@
     </div>
 
     <!-- END LOADER -->
-
-    <div class="box-title-language"> Chọn Ngôn Ngữ</div>
-    <div class="box-language language-option" data-language="1033">
-        <span ic ic-vn-flag></span> Tiếng Việt
+    <div class="choose-language">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="choose-language-content text-center">
+                        <h2 class="title">Chọn ngôn ngữ</h2>
+                        <p class="text">Vui lòng chọn ngôn ngữ bạn muốn xem.</p>
+                    </div>
+                    <div class="main-btn box-language language-option" data-language="1033">
+                        <span ic ic-vn-flag></span> Tiếng Việt
+                    </div>
+                    <div class="main-btn box-language language-option" data-language="2052">
+                        <span ic ic-cn-flag></span> 中文          
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="box-language language-option" data-language="2052">
-        <span ic ic-cn-flag></span> 中文
-    </div>
+    
 
     <!--====== Jquery js ======-->
     <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
@@ -80,8 +79,12 @@
         document.addEventListener('DOMContentLoaded', function () {
             // Thiết lập ngôn ngữ mặc định (nếu có)
             var defaultLanguageId = localStorage.getItem('languageId');
-            if (defaultLanguageId == 1033) {
-                window.location.href = 'index.html' // Thay đổi đường dẫn tới trang ngôn ngữ tương ứng ở đây
+            if (defaultLanguageId === null) {
+                // Chưa chọn ngôn ngữ, để người dùng chọn
+                return;
+            }
+            else if (defaultLanguageId == 1033) {
+                window.location.href = 'index_vi.html' // Thay đổi đường dẫn tới trang ngôn ngữ tương ứng ở đây
             }
             else if (defaultLanguageId == 2052) {
                 window.location.href = 'index_china.html'; // Thay đổi đường dẫn tới trang ngôn ngữ tương ứng ở đây
