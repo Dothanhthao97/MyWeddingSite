@@ -69,22 +69,19 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto">
                                     <li class="nav-item active">
-                                        <a class="page-scroll" href="#home">Home</a>
+                                        <a class="page-scroll" data-id="home">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#couple">Couple</a>
+                                        <a class="page-scroll" data-id="couple">Couple</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#our_love">Story</a>
+                                        <a class="page-scroll" data-id="our_love">Story</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#gallery">Gallery</a>
+                                        <a class="page-scroll" data-id="gallery">Gallery</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#event">Event</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#contact">RSVP</a>
+                                        <a class="page-scroll" data-id="event">Event</a>
                                     </li>
                                     <li class="nav-item buttons-language">
                                         <a class="page-scroll changelang" id="btnLanguage" data-languageid="2052"></a>                                        
@@ -97,7 +94,7 @@
                 </div> <!-- row -->
             </div> <!-- container -->
         </div> <!-- header navbar -->
-        <div id="home " class="carousel slide" data-ride="carousel">
+        <div id="home" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="single_slider bg_cover d-flex align-items-center"
@@ -391,29 +388,29 @@
             <div class="gallery-container gallery-fancybox masonry-gallery">
                 <script type="text/javascript">
                     photoGalleries.push({
-                        src: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5414066967b374d0f32ca/large.jpg",
-                        thumb: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5414066967b374d0f32ca/small.jpg",
+                        src: "/assets/images/Gallery/20250529_084123280_iOS.jpg",
+                        thumb: "/assets/images/Gallery/20250529_084123280_iOS.jpg",
                         subHtml: `<div class="lg-sub-html"><h4></h4></div>`
                     });
                 </script>
 
                 <div class="grid grid-item btn-see-more-gallery wow pulse" data-index="0">
                     <a href="javascript:void(0)">
-                        <img src="https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5414066967b374d0f32ca/small.jpg"
+                        <img src="/assets/images/Gallery/20250529_084123280_iOS.jpg"
                             alt class="img img-responsive">
                     </a>
                 </div>
                 <script type="text/javascript">
                     photoGalleries.push({
-                        src: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5408432101000f0078964/large.jpg",
-                        thumb: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5408432101000f0078964/small.jpg",
+                        src: "/assets/images/Gallery/20250612_225056700_iOS.jpg",
+                        thumb: "/assets/images/Gallery/20250612_225056700_iOS.jpg",
                         subHtml: `<div class="lg-sub-html"><h4></h4></div>`
                     });
                 </script>
 
                 <div class="grid grid-item btn-see-more-gallery wow pulse" data-index="1">
                     <a href="javascript:void(0)">
-                        <img src="https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5408432101000f0078964/small.jpg"
+                        <img src="/assets/images/Gallery/20250612_225056700_iOS.jpg"
                             alt class="img img-responsive">
                     </a>
                 </div>
@@ -729,11 +726,11 @@
                         </div>
                         <div class="event_content">
                             <span class="date">21 Nov 2025</span>
-                            <h3 class="event_title"><a href="#">Bride Shower</a></h3>
-                            <p>Typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-                                the 1500s, when unknown printer took a galley</p>
-                            <a class="more" href="#">Read More...</a>
-                        </div>
+                            <h3 class="event_title"><a href="#">Lễ Vu Quy</a></h3>
+                            <p>Vu Quy – ngày em chính thức trở thành người đồng hành trọn đời của anh,
+                                Mà còn là ngày em mang theo tất cả yêu thương, dặn dò và cả nước mắt của mẹ cha,
+                                để bắt đầu một chương mới – làm dâu, làm vợ, người giữ lửa cho một mái ấm mới,...</p>
+                            </div>
                     </div> <!-- single event -->
                 </div>
                 <div class="col-lg-4 col-md-7">
@@ -743,10 +740,11 @@
                         </div>
                         <div class="event_content">
                             <span class="date">29 Nov 2025</span>
-                            <h3 class="event_title"><a href="#">Wedding Reception</a></h3>
-                            <p>Typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-                                the 1500s, when unknown printer took a galley</p>
-                            <a class="more" href="#">Read More...</a>
+                            <h3 class="event_title"><a href="#">Lễ Thành Hôn</a></h3>
+                            <p>Lễ Thành Hôn – ngày hai chúng mình chính thức về chung một nhà,
+                                không chỉ để xây dựng tổ ấm mà còn để sẻ chia mọi niềm vui, thử thách trong cuộc sống.
+                                Từ hôm nay, ta sẽ cùng nhau cười nhiều hơn, yêu thương nhiều hơn,
+                                và cùng nắm tay đi qua mọi cung bậc của cuộc đời.</p>                           
                         </div>
                     </div> <!-- single event -->
                 </div>
@@ -902,8 +900,12 @@
                 </ul>
             </div> <!-- footer content -->
             <div class="footer_copyright text-center">
-                <p>Designed and Developed by <a href="https://uideck.com" style="color: #D59A57"
-                        rel="nofollow">UIdeck</a></p>
+                <p>Designed and Developed by <a href="https://www.facebook.com/donglb97" style="color: #D59A57"
+                        rel="nofollow">Bá Đông </a>
+                        <span> & </span>
+                        <a href="https://www.facebook.com/thaodtt97/" style="color: #D59A57"
+                        rel="nofollow">Thanh Thảo</a>
+                </p>
             </div>
         </div> <!-- container -->
     </footer>
@@ -912,7 +914,7 @@
 
     <!--====== BACK TOP TOP PART START ======-->
 
-    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <a id="TopPage" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
 
     <!--====== BACK TOP TOP PART ENDS ======-->
 

@@ -16,29 +16,60 @@ $(function () {
             $(".header_navbar img").attr("src", "assets/images/logo-2.png");
         }
     });
-    var scrollLink = $('.page-scroll');
-    $(window).scroll(function () {
-        var scrollbarLocation = $(this).scrollTop();
-        scrollLink.each(function () {
-            var hash = $(this.hash);
-            if (hash != undefined && hash.length > 0) {
-                var sectionOffset = hash.offset().top - 73;
-                if (sectionOffset <= scrollbarLocation) {
+
+    $('.page-scroll').click(function(e){
+        e.preventDefault(); // Ngăn load lại trang
+        var curentID = $(this).data('id');
+        var ElementTarget = $('#' + curentID);
+        if ($(ElementTarget).length) {
+            $('html, body').animate({
+                scrollTop: $(ElementTarget).offset().top
+            }, 0); // 800ms là thời gian cuộn
+        }
+        $('.page-scroll').parent().removeClass('active');
+        $(this).parent().addClass('active');
+    });
+
+    // Auto update active khi scroll (tùy chọn)
+    $(window).on('scroll', function () {
+        var scrollPos = $(document).scrollTop();
+        $('.page-scroll').each(function () {
+            var curentID = $(this).data('id');
+            var target = $('#' + curentID);
+            if ($(target).length) {
+                var offsetTop = $(target).offset().top - 100; // trừ offset nếu có header
+                var offsetBottom = offsetTop + $(target).outerHeight();
+
+                if (scrollPos >= offsetTop && scrollPos < offsetBottom) {
+                    $('.page-scroll').parent().removeClass('active');
                     $(this).parent().addClass('active');
-                    $(this).parent().siblings().removeClass('active');
                 }
             }
         });
     });
-    $(".navbar-nav a").on('click', function () {
-        $(".navbar-collapse").removeClass("show");
+
+    $('#TopPage').click(function(e){
+        e.preventDefault();
+    
+        // Nếu đang mở menu, đóng menu rồi mới scroll
+        $('.navbar-collapse').collapse('hide'); // Bootstrap
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 600);
+        }, 300); // delay đủ thời gian để menu đóng (300ms ~ chuẩn Bootstrap)
     });
-    $(".navbar-toggler").on('click', function () {
-        $(this).toggleClass("active");
-    });
-    $(".navbar-nav a").on('click', function () {
-        $(".navbar-toggler").removeClass('active');
-    });
+    
+
+    // $(".navbar-nav a").on('click', function () {
+    //     $(".navbar-collapse").removeClass("show");
+    // });
+    // $(".navbar-toggler").on('click', function () {
+    //     $(this).toggleClass("active");
+    // });
+    // $(".navbar-nav a").on('click', function () {
+    //     $(".navbar-toggler").removeClass('active');
+    // });
     function mainSlider() {
         var BasicSlider = $('.slider-active');
         BasicSlider.on('init', function (e, slick) {
@@ -217,8 +248,8 @@ function RunMyScript(){
         var selectedLanguageId = $(this).data('languageid');
         localStorage.setItem('languageId', selectedLanguageId);
         // Chuyển hướng tới trang ngôn ngữ tương ứng
-        if (selectedLanguageId == 1033) {
-            window.location.href = 'index.html' // Thay đổi đường dẫn tới trang ngôn ngữ tương ứng ở đây
+        if (selectedLanguageId == 2051) {
+            window.location.href = 'index_vi.html' // Thay đổi đường dẫn tới trang ngôn ngữ tương ứng ở đây
         }
         else if (selectedLanguageId == 2052) {
             window.location.href = 'index_china.html'; // Thay đổi đường dẫn tới trang ngôn ngữ tương ứng ở đây
@@ -230,7 +261,7 @@ function CheckChooseLanguage(){
     var defaultLanguageId = localStorage.getItem('languageId');
     if(defaultLanguageId == null || defaultLanguageId == ''){
         var selectedLanguageId = $(this).data('languageid');
-        localStorage.setItem('languageId', 1033);
+        localStorage.setItem('languageId', 2051);
         window.location.href = 'index.html';
     }
 }

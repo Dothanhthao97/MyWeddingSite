@@ -166,7 +166,8 @@
     }
 }
 
-
+.lg-outer .lg-inner{height: calc(100vh - 110px);top: auto;bottom: 10px;}
+html:has(.lg-start-zoom), body:has(.lg-start-zoom){overflow: hidden;}
 
 
 

@@ -133,6 +133,7 @@
             position: relative;
             font-family: $font-2;
             position: relative;
+            cursor: pointer;
            
             &.changelang{
                 background: url(../images/china.png) no-repeat; width: 30px; height: 30px; background-size: 30px; display: flex; cursor: pointer;

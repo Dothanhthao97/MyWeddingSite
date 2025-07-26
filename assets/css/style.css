@@ -599,6 +599,7 @@ p {
   position: relative;
   font-family: "Poppins", sans-serif;
   position: relative;
+  cursor: pointer;
 }
 
 .navbar-nav .nav-item a.changelang {
@@ -1724,6 +1725,16 @@ p {
   visibility: visible;
 }
 
+.lg-outer .lg-inner {
+  height: calc(100vh - 110px);
+  top: auto;
+  bottom: 10px;
+}
+
+html:has(.lg-start-zoom), body:has(.lg-start-zoom) {
+  overflow: hidden;
+}
+
 /*===========================
      07.EVENT css 
 ===========================*/
@@ -2052,7 +2063,7 @@ p.form-message.success.form-message.error, p.form-message.error.form-message.err
 }
 
 /*===== BACK TO TOP =====*/
-.back-to-top {
+a.back-to-top:not([href]):not([tabindex]) {
   font-size: 20px;
   color: #fff;
   position: fixed;
@@ -2068,10 +2079,12 @@ p.form-message.success.form-message.error, p.form-message.error.form-message.err
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
   display: none;
+  cursor: pointer;
+  border: 1px solid #D59A57;
 }
 
-.back-to-top:hover {
-  color: #fff;
-  background-color: #D59A57;
+a.back-to-top:not([href]):not([tabindex]):hover {
+  color: #D59A57;
+  background-color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
