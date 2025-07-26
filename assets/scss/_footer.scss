@@ -81,7 +81,7 @@
 
 /*===== BACK TO TOP =====*/
 
-.back-to-top{
+a.back-to-top:not([href]):not([tabindex]){
     font-size: 20px;
     color: $white;
     position: fixed;
@@ -96,10 +96,12 @@
     z-index: 99;
     @include transition(0.3s);
     display: none;
+    cursor: pointer;
+    border: 1px solid $theme-color;
     
     &:hover{
-        color: $white;
-        background-color: $theme-color;
+        color: $theme-color;
+        background-color: $white;
     }
 }
 
