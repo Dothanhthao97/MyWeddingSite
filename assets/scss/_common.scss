@@ -288,8 +288,8 @@ p {
         }
     }
 }
-
-/* Preloader Animations */
+.choose-language{height: 100vh;display: flex;align-items: center;justify-content: center;text-align: center}
+.choose-language-content{margin-bottom: 15px}/* Preloader Animations*/
 
 @-webkit-keyframes ytp-spinner-linspin {
     to {
