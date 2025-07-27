@@ -20,7 +20,7 @@
 }
 
 
-.sticky {
+.sticky,.header_navbar_gallery {
     position: fixed;
     z-index: 99;
     background-color: $white;
@@ -277,7 +277,7 @@
 }
 
 
-.sticky{
+.sticky, .header_navbar_gallery{
     & .navbar-toggler {
         & .toggler-icon {
             background-color: $black;
@@ -498,10 +498,9 @@
     }
 }
 
-
-
-
-
+.header_navbar_gallery {
+    color: black;
+}
 
 
 

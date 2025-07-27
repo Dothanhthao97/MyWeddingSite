@@ -65,10 +65,12 @@
         background-image: url(https://phamchuyen.iwedding.info/templates/template7/css/../img/fancybox/fancybox_sprite.png);
     }
 }
-.gallery_wrapper{
-    margin-top: 30px;
-}
 .gallery_wrapper {
+    margin-top: 30px;
+
+    .item-gallery a{
+        padding: 5px;
+    }
     .gallery-container {
         margin: 0 -7.5px;
     }
@@ -90,10 +92,17 @@
 
 .single_gallery{
     position: relative;
+    padding: 3px;
     
     & .gallery_image{
+
+        height: 350px;
+        overflow: hidden;
+
         & img{
             width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
     & .gallery_content{
@@ -169,6 +178,43 @@
 .lg-outer .lg-inner{height: calc(100vh - 110px);top: auto;bottom: 10px;}
 html:has(.lg-start-zoom), body:has(.lg-start-zoom){overflow: hidden;}
 
+.box-see-more{text-align: center;}
+.box-see-more a {
+    transition: all 0.5s;
+    cursor: pointer;
+    position: relative;
+    margin-top: 15px;
+    display: inline-flex;align-items: center;
+    color: #D59A57;
+  }
+  
+  .box-see-more a span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .box-see-more a i{
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    background: none;
+    color: #D59A57;
+    padding-left: 0;
+  }
+  
+  .box-see-more a:hover span {
+    padding-right: 25px;
+  }
+  
+  .box-see-more a:hover i:not(.disabled) {
+    opacity: 1;
+    right: -15px;
+    color: #D59A57;
+  }
 
 
 
