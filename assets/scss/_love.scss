@@ -1,23 +1,18 @@
-
-
-
 /*===========================
      05.OUR LOVE css 
 ===========================*/
 
-.our_love_area{
-    
-}
+.our_love_area {}
 
-.love_wrapper{
+.love_wrapper {
     position: relative;
     margin-top: 30px;
-    
-    @media #{$xs}{
+
+    @media #{$xs} {
         margin-top: 0;
     }
-    
-    &::before{
+
+    &::before {
         width: 1px;
         height: 100%;
         position: absolute;
@@ -26,41 +21,43 @@
         left: 50%;
         top: 0;
         @include transform(translateX(-50%));
-        
-        @media #{$xs}{
+
+        @media #{$xs} {
             display: none;
         }
     }
 }
 
-.single_love{
-    & .love_content{
+.single_love {
+    & .love_content {
         width: 45%;
-        
-        @media #{$xs}{
+
+        @media #{$xs} {
             width: 100%;
             margin-top: 30px;
         }
-        
-        & .love_title{
+
+        & .love_title {
             font-size: 30px;
             color: $theme-color;
         }
-        & p{
+
+        & p {
             margin-top: 30px;
             font-weight: 300;
         }
     }
-    & .love_date{
+
+    & .love_date {
         width: 10%;
         text-align: center;
-        
-        @media #{$xs}{
+
+        @media #{$xs} {
             width: 100%;
             margin-top: 30px;
         }
-        
-        p{
+
+        p {
             width: 40px;
             position: relative;
             color: $theme-color;
@@ -74,17 +71,17 @@
             padding-top: 62px;
             background-color: $white;
             margin: 0 auto;
-            
-            @media #{$xs}{
+
+            @media #{$xs} {
                 width: auto;
                 height: 40px;
                 padding-left: 62px;
                 padding-right: 30px;
                 padding-top: 0;
                 padding-bottom: 0;
-            }    
-            
-            & i{
+            }
+
+            & i {
                 width: 40px;
                 height: 40px;
                 line-height: 38px;
@@ -95,36 +92,79 @@
                 position: absolute;
                 top: -1px;
                 left: -1px;
-                
-                @media #{$xs}{
-                    
-                }
+
+                @media #{$xs} {}
             }
         }
     }
-    & .love_image{
+
+    & .love_image {
         width: 45%;
-        
-        @media #{$xs}{
+
+        &.fadeInRightBig {
+            text-align: right;
+        }
+
+        .boxLoveStory {
+            width: 100%;
+            height: 395px;
+            overflow: hidden;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        @media #{$xs} {
             width: 100%;
             margin-top: 30px;
         }
-        
-        & img{
+
+        & img {
             width: 100%;
-            border-radius: 10px;
-            
-            @media #{$md}{
+            height: 100%;
+            object-fit: cover;
+           
+
+            @media #{$md} {
                 height: 415px;
                 object-fit: cover;
                 object-position: center;
             }
         }
+
+        .loveStory1 {
+            img {
+                 object-position: 50% 20%;
+            }
+        }
+
+        .loveStory2 {
+            img {
+                 object-position: 50% 90%;
+            }
+        }
+
+        .loveStory4 {
+            img {
+                 object-position: 50% 95%;
+            }
+        }
+        .loveStory5 {
+            img {
+                 object-position: 50% 40%;
+            }
+        }
     }
 }
 
-.bii-player{
-    position: fixed; left:50px; bottom:70px; z-index: 9999; height: 40px; width: 40px;;
+.bii-player {
+    position: fixed;
+    left: 50px;
+    bottom: 70px;
+    z-index: 9999;
+    height: 40px;
+    width: 40px;
+    ;
+
     &.bii-player:after {
         content: "";
         position: absolute;
@@ -143,6 +183,7 @@
         animation: biilogo-pulse 1s infinite;
         z-index: 1;
     }
+
     .playerIcon {
         cursor: pointer;
         display: block;
@@ -160,6 +201,7 @@
         z-index: 2;
     }
 }
+
 .bii-player-secondary {
     position: absolute;
     width: 310px;
@@ -168,6 +210,7 @@
     overflow: hidden;
     visibility: hidden;
 }
+
 .bii-player-secondary-content {
     display: flex;
     align-items: center;
@@ -189,26 +232,20 @@
     font-weight: 200;
     color: #000;
 }
-@keyframes biilogo-pulse{
+
+@keyframes biilogo-pulse {
     0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
     }
+
     50% {
         -webkit-transform: scale3d(0.95, 0.95, 0.95);
         transform: scale3d(0.95, 0.95, 0.95);
     }
+
     100% {
         -webkit-transform: scale3d(1, 1, 1);
         transform: scale3d(1, 1, 1);
     }
 }
-
-
-
-
-
-
-
-
-

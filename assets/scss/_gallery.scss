@@ -193,11 +193,14 @@ html:has(.lg-start-zoom), body:has(.lg-start-zoom){overflow: hidden;}
     display: inline-block;
     position: relative;
     transition: 0.5s;
+    font-size: 40px;
+    font-family: "Great Vibes";
   }
   
   .box-see-more a i{
     position: absolute;
     opacity: 0;
+    top: 20px;
     top: 0;
     right: -20px;
     transition: 0.5s;
