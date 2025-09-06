@@ -189,6 +189,9 @@ $(function () {
         $.fancybox({
             href: this.href,
             type: $(this).data("type"),
+            width: '100%',
+            height: '100%',
+            autoSize: false,
             title: this.title,
             helpers: { title: { type: 'inside' }, media: {} },
             beforeShow: function () {

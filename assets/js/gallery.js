@@ -85,43 +85,96 @@ var imageList = [
     "20250725_165221389_iOS.webp",
     "20250727_060213329_iOS.webp",
     "20250727_063519956_iOS.webp"
-  ];
+];
 
-$(function () {
-    RenderGallery('lightgallery_1', imageList, "Dream");
-    RenderGallery('lightgallery_2', imageList, "Studio");
-    RenderGallery('lightgallery_3', imageList, "VietPhuc");
-    RenderGallery('lightgallery_4', imageList, "HyPhuc");
-});
+// Số ảnh mỗi lần load
+const PAGE_SIZE = 10;
 
-function RenderGallery(eleGallery, imageList, folderName){
+// Lưu trạng thái số ảnh đã load cho từng gallery
+const loadedCount = {
+    'lightgallery_1': 0,
+    'lightgallery_2': 0,
+    'lightgallery_3': 0,
+    'lightgallery_4': 0
+};
+
+// Danh sách gallery và folder tương ứng
+const galleries = [
+    { id: 'lightgallery_1', folder: 'Dream' },
+    { id: 'lightgallery_2', folder: 'Studio' },
+    { id: 'lightgallery_3', folder: 'VietPhuc' },
+    { id: 'lightgallery_4', folder: 'HyPhuc' }
+];
+
+// Lưu instance Masonry cho từng gallery
+const masonryInstances = {};
+
+function RenderGallery(eleGallery, imageList, folderName, start = 0, count = PAGE_SIZE) {
     const $container = $('#' + eleGallery);
 
-    // Clear and insert images
-    $container.empty();
-    imageList.forEach(file => {
-    const imgPath = `assets/images/Gallery/${folderName}/${file}`;
-    $container.append(`
+    // Nếu là lần đầu thì clear, nếu load thêm thì không
+    if (start === 0) $container.empty();
+
+    // Lấy danh sách ảnh cần render
+    const imagesToShow = imageList.slice(start, start + count);
+    imagesToShow.forEach(file => {
+        const imgPath = `assets/images/Gallery/${folderName}/${file}`;
+        $container.append(`
             <div class="col-lg-3 col-sm-6 item-gallery wow fadeIn">
                 <a href="${imgPath}" class="d-block h-100">
-                    <img class="img-fluid rounded" src="${imgPath}" alt="">
+                    <img class="img-fluid rounded" src="${imgPath}" alt="" loading="lazy">
                 </a>
             </div>
         `);
     });
 
-    // Wait for all images to load
     imagesLoaded($container[0], function () {
-        // 1. Init Masonry
-        new Masonry($container[0], {
-            itemSelector: '.col-lg-3',
-            percentPosition: true
-        });
-    
-        // 2. Init LightGallery
-        lightGallery($container[0], {
-            selector: 'a',
-            plugins: [lgZoom, lgThumbnail],
-        });
+        // Nếu là lần đầu, khởi tạo Masonry và LightGallery
+        if (start === 0) {
+            masonryInstances[eleGallery] = new Masonry($container[0], {
+                itemSelector: '.col-lg-3',
+                percentPosition: true
+            });
+            lightGallery($container[0], {
+                selector: 'a',
+                plugins: [lgZoom, lgThumbnail],
+            });
+        } else {
+            // Nếu load thêm thì chỉ gọi layout lại
+            if (masonryInstances[eleGallery]) {
+                masonryInstances[eleGallery].reloadItems();
+                masonryInstances[eleGallery].layout();
+            }
+        }
     });
 }
+
+$(function () {
+    // Khởi tạo mỗi gallery với 10 ảnh đầu
+    galleries.forEach(g => {
+        RenderGallery(g.id, imageList, g.folder, 0, PAGE_SIZE);
+        loadedCount[g.id] = PAGE_SIZE;
+    });
+
+    // Lắng nghe sự kiện scroll để load thêm ảnh (chỉ load 1 gallery mỗi lần scroll)
+    $(window).on('scroll', function () {
+        for (let i = 0; i < galleries.length; i++) {
+            const g = galleries[i];
+            const $gallery = $('#' + g.id);
+            if (!$gallery.length) continue;
+
+            const galleryBottom = $gallery.offset().top + $gallery.height();
+            const windowBottom = $(window).scrollTop() + $(window).height();
+
+            if (
+                windowBottom > galleryBottom - 200 &&
+                loadedCount[g.id] < imageList.length &&
+                windowBottom > $gallery.offset().top
+            ) {
+                RenderGallery(g.id, imageList, g.folder, loadedCount[g.id], PAGE_SIZE);
+                loadedCount[g.id] += PAGE_SIZE;
+                break; // Chỉ load thêm cho 1 gallery mỗi lần scroll
+            }
+        }
+    });
+});
