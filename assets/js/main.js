@@ -128,16 +128,16 @@ $(function () {
             $this.html(event.strftime(`
                 <div class="coming_soon_count d-flex justify-content-between pt-20">
                     <div class="single_count d-flex align-items-center justify-content-center mt-30">
-                        <div class="count_content"><span class="count">%D</span><p class="times">Days</p></div>
+                        <div class="count_content"><span class="count">%D</span><p class="times">Ngày</p></div>
                     </div>
                     <div class="single_count d-flex align-items-center justify-content-center mt-30">
-                        <div class="count_content"><span class="count">%H</span><p class="times">Hours</p></div>
+                        <div class="count_content"><span class="count">%H</span><p class="times">Giờ</p></div>
                     </div>
                     <div class="single_count d-flex align-items-center justify-content-center mt-30">
-                        <div class="count_content"><span class="count">%M</span><p class="times">Minutes</p></div>
+                        <div class="count_content"><span class="count">%M</span><p class="times">Phút</p></div>
                     </div>
                     <div class="single_count d-flex align-items-center justify-content-center mt-30">
-                        <div class="count_content"><span class="count">%S</span><p class="times">Seconds</p></div>
+                        <div class="count_content"><span class="count">%S</span><p class="times">Giây</p></div>
                     </div>
                 </div>`));
         });

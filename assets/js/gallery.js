@@ -1,22 +1,9 @@
-var imageList = [
-    "20250529_063753000_iOS.webp",
-    "20250529_063815460_iOS.webp",
-    "20250529_064010120_iOS.webp",
+var imageList_1 = [
     "20250529_064935000_iOS.webp",
-    "20250529_065011050_iOS.webp",
-    "20250529_065835630_iOS.webp",
-    "20250529_065838370_iOS.webp",
-    "20250529_070142470_iOS.webp",
     "20250529_081244000_iOS.webp",
-    "20250529_081622370_iOS.webp",
     "20250529_081712480_iOS.webp",
-    "20250529_082837370_iOS.webp",
-    "20250529_082903820_iOS.webp",
     "20250529_082908490_iOS.webp",
-    "20250529_083223300_iOS.webp",
     "20250529_083625270_iOS.webp",
-    "20250529_083856410_iOS.webp",
-    "20250529_084000760_iOS.webp",
     "20250529_084123280_iOS.webp",
     "20250529_084328280_iOS.webp",
     "20250612_223930620_iOS.webp",
@@ -27,13 +14,12 @@ var imageList = [
     "20250612_232312830_iOS.webp",
     "20250612_232739620_iOS.webp",
     "20250612_232953540_iOS.webp",
+    "20250612_233205950_iOS.webp",
     "20250612_233729120_iOS.webp",
+    "20250612_233928860_iOS.webp",
     "20250612_234130880_iOS.webp",
     "20250612_234401000_iOS.webp",
-    "20250612_234548570_iOS.webp",
     "20250612_234731890_iOS.webp",
-    "20250612_235642920_iOS.webp",
-    "20250612_235924180_iOS.webp",
     "20250613_000123320_iOS.webp",
     "20250613_000404000_iOS.webp",
     "20250613_000424340_iOS.webp",
@@ -45,50 +31,65 @@ var imageList = [
     "20250613_012053000_iOS.webp",
     "20250613_012140560_iOS.webp",
     "20250613_012612170_iOS.webp",
-    "20250613_012748920_iOS.webp",
     "20250613_012757730_iOS.webp",
     "20250613_012910430_iOS.webp",
-    "20250613_013118000_iOS.webp",
     "20250613_013141160_iOS.webp",
     "20250613_013507690_iOS.webp",
     "20250613_013639500_iOS.webp",
     "20250613_014145880_iOS.webp",
-    "20250613_014413110_iOS.webp",
-    "20250613_014452250_iOS.webp",
-    "20250613_014727470_iOS.webp",
-    "20250702_153347847_iOS.webp",
-    "20250715_170719835_iOS.webp",
-    "20250715_171518116_iOS.webp",
-    "20250716_165138982_iOS.webp",
-    "20250716_170507183_iOS.webp",
-    "20250717_053503068_iOS.webp",
-    "20250717_143805151_iOS.webp",
-    "20250717_144907413_iOS.webp",
-    "20250717_145937718_iOS.webp",
-    "20250717_150539534_iOS.webp",
-    "20250717_162759714_iOS.webp",
-    "20250717_163733527_iOS.webp",
-    "20250718_053222873_iOS.webp",
-    "20250718_053857754_iOS.webp",
-    "20250718_054149029_iOS.webp",
-    "20250718_084748614_iOS.webp",
-    "20250718_085130152_iOS.webp",
-    "20250718_173008413_iOS.webp",
-    "20250719_020956121_iOS.webp",
-    "20250719_052747071_iOS.webp",
-    "20250719_064047236_iOS.webp",
-    "20250720_043632037_iOS.webp",
-    "20250720_044951169_iOS.webp",
-    "20250721_181734742_iOS.webp",
-    "20250723_053848799_iOS.webp",
-    "20250724_053224267_iOS.webp",
-    "20250725_165221389_iOS.webp",
-    "20250727_060213329_iOS.webp",
-    "20250727_063519956_iOS.webp"
+    "20250613_014452250_iOS.webp"
 ];
 
+var imageList_2 = [
+  "20250622_024227820_iOS.webp",
+  "20250622_024355490_iOS.webp",
+  "20250622_024546760_iOS.webp",
+  "20250622_024730270_iOS.webp",
+  "20250622_024937880_iOS.webp",
+  "20250622_025831460_iOS.webp",
+  "20250622_025850350_iOS.webp",
+  "20250622_030153220_iOS.webp",
+  "20250622_030207670_iOS.webp",
+  "20250622_030302210_iOS.webp",
+  "20250622_030331630_iOS.webp",
+  "20250622_030350270_iOS.webp",
+  "20250622_030527420_iOS.webp",
+  "20250622_031141650_iOS.webp",
+  "20250622_031546730_iOS.webp",
+  "20250622_031816960_iOS.webp"
+];
+
+var imageList_4 = [
+  "20250622_041349520_iOS.webp",
+  "20250622_041539550_iOS.webp",
+  "20250622_041633350_iOS.webp",
+  "20250622_041933400_iOS.webp",
+  "20250622_041940350_iOS.webp",
+  "20250622_042019090_iOS.webp",
+  "20250622_042048210_iOS.webp",
+  "20250622_042224180_iOS.webp",
+  "20250622_042445990_iOS.webp",
+  "20250622_042602110_iOS.webp"
+];
+
+
+var imageList_3 = [
+  "20250622_051058720_iOS.webp",
+  "20250622_051114490_iOS.webp",
+  "20250622_051243630_iOS.webp",
+  "20250622_051313970_iOS.webp",
+  "20250622_051433990_iOS.webp",
+  "20250622_051602220_iOS.webp",
+  "20250622_052010420_iOS.webp",
+  "20250622_052259930_iOS.webp",
+  "20250622_052441590_iOS.webp",
+  "20250622_053056940_iOS.webp",
+  "20250622_053209650_iOS.webp"
+];
+
+
 // Số ảnh mỗi lần load
-const PAGE_SIZE = 10;
+const PAGE_SIZE = 200;
 
 // Lưu trạng thái số ảnh đã load cho từng gallery
 const loadedCount = {
@@ -100,10 +101,10 @@ const loadedCount = {
 
 // Danh sách gallery và folder tương ứng
 const galleries = [
-    { id: 'lightgallery_1', folder: 'Dream' },
-    { id: 'lightgallery_2', folder: 'Studio' },
-    { id: 'lightgallery_3', folder: 'VietPhuc' },
-    { id: 'lightgallery_4', folder: 'HyPhuc' }
+    { id: 'lightgallery_1', folder: 'Dream', imageList: imageList_1 },
+    { id: 'lightgallery_2', folder: 'Studio', imageList: imageList_2 },
+    { id: 'lightgallery_3', folder: 'HyPhuc', imageList: imageList_3 },
+    { id: 'lightgallery_4', folder: 'VietPhuc', imageList: imageList_4 }
 ];
 
 // Lưu instance Masonry cho từng gallery
@@ -135,15 +136,21 @@ function RenderGallery(eleGallery, imageList, folderName, start = 0, count = PAG
                 itemSelector: '.col-lg-3',
                 percentPosition: true
             });
-            lightGallery($container[0], {
+            // Lưu instance LightGallery để refresh sau này
+            $container[0].lgInstance = lightGallery($container[0], {
                 selector: 'a',
-                plugins: [lgZoom, lgThumbnail],
+                plugins: [lgThumbnail], // Thêm lgZoom vào đây
             });
         } else {
             // Nếu load thêm thì chỉ gọi layout lại
             if (masonryInstances[eleGallery]) {
                 masonryInstances[eleGallery].reloadItems();
                 masonryInstances[eleGallery].layout();
+            }
+
+            // Refresh LightGallery để nhận ảnh mới
+            if ($container[0].lgInstance) {
+                $container[0].lgInstance.refresh();
             }
         }
     });
@@ -152,7 +159,7 @@ function RenderGallery(eleGallery, imageList, folderName, start = 0, count = PAG
 $(function () {
     // Khởi tạo mỗi gallery với 10 ảnh đầu
     galleries.forEach(g => {
-        RenderGallery(g.id, imageList, g.folder, 0, PAGE_SIZE);
+        RenderGallery(g.id, g.imageList, g.folder, 0, PAGE_SIZE);
         loadedCount[g.id] = PAGE_SIZE;
     });
 
