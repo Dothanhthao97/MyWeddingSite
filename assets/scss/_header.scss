@@ -42,11 +42,15 @@
 
 .navbar-brand {
     padding: 0;
-    
+
     & img{
         width: 85px;
     }
 }
+
+.navbar-brand.navbar-brand-language {
+        margin-left: 50px;
+    }
 
 
 .navbar-toggler {

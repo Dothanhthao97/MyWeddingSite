@@ -217,8 +217,8 @@ function RunMyScript() {
         const languageId = $(this).data('languageid');
         localStorage.setItem('languageId', languageId);
         if (languageId == 2051) {
-            window.location.href = 'index_vi.html';
-        } else if (languageId == 2052) {
+            window.location.href = 'index.html';
+        } else if (languageId == 1066) {
             window.location.href = 'index_china.html';
         }
     });
@@ -227,8 +227,7 @@ function RunMyScript() {
 function CheckChooseLanguage() {
     const languageId = localStorage.getItem('languageId');
     if (!languageId) {
-        localStorage.setItem('languageId', 2051);
-        window.location.href = 'index.html';
+        window.location.href = 'chooselanguage.html';
     }
 }
 

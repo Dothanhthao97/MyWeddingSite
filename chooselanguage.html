@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--====== Title ======-->
+    <title>Choose language</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="assets/css/LineIcons.css">
+
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+    </style>
+</head>
+
+<body class="HeartFall">
+
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+            </div>
+        </div>
+    </div>
+
+    <!-- END LOADER -->
+
+    <section class="header_area">
+        <div class="header_navbar header_navbar_gallery">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand navbar-brand-language" href="#">
+                                <img src="assets/images/logo-2.png" alt="Logo">
+                            </a>
+                        </nav> <!-- navbar -->
+                    </div>
+                    
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- header navbar -->
+
+        <!-- header slider -->
+    </section>   
+
+    <div class="choose-language">
+        <div class="choose-language-content">
+            <div class="box-title-language"> Chọn Ngôn Ngữ</div>
+            <div class="box-img-language">
+                <img src="assets/images/section_shape.png" alt="Shape">
+            </div>
+            <div class="box-language">
+                <div class="language-option" data-language="1033">
+                    <span ic ic-vn-flag></span> Tiếng Việt
+                </div>
+                <div class="language-option" data-language="1066">
+                    <span ic ic-cn-flag></span> 中文
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--====== Jquery js ======-->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+
+    <!--====== heart fall js ======-->
+    <script src='assets/js/snowfall.jquery.min.js'></script>
+    <script src='assets/js/snowfall.min.js'></script>
+
+    <script>
+
+        $(function () {
+            $('.preloader').delay(500).fadeOut(500);
+        });
+
+        var languageOptions = document.querySelectorAll('.language-option');
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Thiết lập ngôn ngữ mặc định (nếu có)
+            var defaultLanguageId = localStorage.getItem('languageId');
+            if (defaultLanguageId == 1033) {
+                window.location.href = 'index.html' // Thay đổi đường dẫn tới trang ngôn ngữ tương ứng ở đây
+            }
+            else if (defaultLanguageId == 1066) {
+                window.location.href = 'index_china.html'; // Thay đổi đường dẫn tới trang ngôn ngữ tương ứng ở đây
+            }
+        });
+
+        // Lưu ngôn ngữ được chọn khi nhấn nút "Lưu"
+        document.addEventListener('click', function (event) {
+            if (event.target.classList.contains('language-option')) {
+                var selectedLanguageId = event.target.dataset.language;
+                localStorage.setItem('languageId', selectedLanguageId);
+
+                // Chuyển hướng tới trang ngôn ngữ tương ứng
+                if (selectedLanguageId == 1033) {
+                    window.location.href = 'index.html' // Thay đổi đường dẫn tới trang ngôn ngữ tương ứng ở đây
+                }
+                else if (selectedLanguageId == 1066) {
+                    window.location.href = 'index_china.html'; // Thay đổi đường dẫn tới trang ngôn ngữ tương ứng ở đây
+                }
+            }
+        });
+
+        $(document).snowfall({
+            image: "assets/images/heart.png",
+            minSize: 5,
+            maxSize: 32,
+            flakeCount: 10,
+            maxSpeed: 0.5
+        });
+    </script>
+</body>
+
+</html>
