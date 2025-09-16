@@ -237,6 +237,7 @@ $(function () {
     });
 
     // Initialize album popup
+    // Album 1: animate thumbnail, ẩn khi popup mở, hiện lại khi đóng
     $('#ablum1').magnificPopup({
         items: {
             src: '#popup-ablum1',
@@ -245,10 +246,75 @@ $(function () {
         closeBtnInside: true,
         mainClass: 'mfp-fade',
         callbacks: {
-        open: function() {
-            $('.mfp-content').addClass('mfp-ablum');
+            open: function () {
+                $('.mfp-content').addClass('mfp-ablum');
+                // Không cần ẩn thumbnail ở đây nữa
+            },
+            close: function () {
+                // Hiện lại thumbnail khi popup đóng
+                var $thumb = $('#ablum1').find('img');
+                if ($thumb.length === 0) $thumb = $('#ablum1');
+                $thumb.css('visibility', 'visible');
+            }
+        },
+        delegate: false
+    });
+
+    $('#ablum1').off('click').on('click', function (e) {
+        e.preventDefault();
+        var $thumb = $(this).find('img');
+        if ($thumb.length === 0) {
+            $thumb = $(this);
         }
-    }
+        // Ẩn thumbnail ngay khi click
+        var $clone = $thumb.clone()
+            .css({
+                position: 'absolute',
+                zIndex: 9999,
+                left: $thumb.offset().left,
+                top: $thumb.offset().top,
+                width: $thumb.width(),
+                height: $thumb.height(),
+                margin: 0,
+                pointerEvents: 'none',
+                borderRadius: $thumb.css('border-radius')
+            })
+            .appendTo('body');
+
+        $thumb.css('visibility', 'hidden');
+
+        var winW = $(window).width();
+        var winH = $(window).height();
+        var centerLeft = winW / 2 - $thumb.width() / 2;
+        var centerTop = winH / 2 - $thumb.height() / 2 + $(window).scrollTop();
+
+        // Thêm easing cubic và animate opacity
+        $clone.animate({
+            left: centerLeft,
+            top: centerTop - 100,
+            width: $thumb.width() * 1.2,
+            height: $thumb.height() * 1.2,
+            opacity: 0.5
+        }, {
+            duration: 600,
+            easing: 'easeInOutCubic',
+            step: function (now, fx) {
+                // Có thể thêm hiệu ứng khác nếu muốn
+            },
+            complete: function () {
+                $clone.fadeOut(180, function () {
+                    $clone.remove();
+                    $('#ablum1').magnificPopup('open');
+                });
+            }
+        });
+        // jQuery easing cubic nếu chưa có
+        if (typeof $.easing.easeInOutCubic !== 'function') {
+            $.easing.easeInOutCubic = function (x, t, b, c, d) {
+                if ((t /= d / 2) < 1) return c / 2 * t * t * t + b;
+                return c / 2 * ((t -= 2) * t * t + 2) + b;
+            };
+        }
     });
 
     $('#ablum2').magnificPopup({
@@ -259,10 +325,10 @@ $(function () {
         closeBtnInside: true,
         mainClass: 'mfp-fade',
         callbacks: {
-        open: function() {
-            $('.mfp-content').addClass('mfp-ablum');
+            open: function () {
+                $('.mfp-content').addClass('mfp-ablum');
+            }
         }
-    }
     });
 
     // Initialize bookblock ablum1
