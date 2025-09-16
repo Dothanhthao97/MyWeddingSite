@@ -21,7 +21,7 @@ $(function () {
         // Sticky header
         if (scrollTop < 20) {
             $headerNavbar.removeClass("sticky");
-            if($headerNavbar.hasClass('header_navbar_gallery'))
+            if ($headerNavbar.hasClass('header_navbar_gallery'))
                 $headerNavbar.find("img").attr("src", "assets/images/logo-2.png");
             else
                 $headerNavbar.find("img").attr("src", "assets/images/logo.png");
@@ -58,7 +58,9 @@ $(function () {
         e.preventDefault();
         const target = $('#' + $(this).data('id'));
         if (target.length) {
-            $('html, body').animate({ scrollTop: target.offset().top }, 0);
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 0);
             $pageScroll.parent().removeClass('active');
             $(this).parent().addClass('active');
         }
@@ -69,14 +71,18 @@ $(function () {
         e.preventDefault();
         $('.navbar-collapse').collapse('hide');
         setTimeout(() => {
-            $('html, body').animate({ scrollTop: 0 }, 600);
+            $('html, body').animate({
+                scrollTop: 0
+            }, 600);
         }, 300);
     });
 
     // Back to top
     $backToTop.on('click', function (e) {
         e.preventDefault();
-        $('html, body').animate({ scrollTop: 0 }, 1500);
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1500);
     });
 
     // Main Slider
@@ -99,7 +105,9 @@ $(function () {
             arrows: false,
             responsive: [{
                 breakpoint: 767,
-                settings: { arrows: false }
+                settings: {
+                    arrows: false
+                }
             }]
         });
     }
@@ -110,7 +118,10 @@ $(function () {
             const $el = $(this);
             const delay = $el.data('delay');
             const animationType = 'animated ' + $el.data('animation');
-            $el.css({ 'animation-delay': delay, '-webkit-animation-delay': delay })
+            $el.css({
+                    'animation-delay': delay,
+                    '-webkit-animation-delay': delay
+                })
                 .addClass(animationType)
                 .one(animationEndEvents, () => {
                     $el.removeClass(animationType);
@@ -153,15 +164,24 @@ $(function () {
         arrows: true,
         prevArrow: '<span class="prev"><i class="lni lni-chevron-left"></i></span>',
         nextArrow: '<span class="next"><i class="lni lni-chevron-right"></i></span>',
-        responsive: [{ breakpoint: 576, settings: { arrows: false } }]
+        responsive: [{
+            breakpoint: 576,
+            settings: {
+                arrows: false
+            }
+        }]
     });
 
     // Video & image popups
-    $('.video-popup').magnificPopup({ type: 'iframe' });
+    $('.video-popup').magnificPopup({
+        type: 'iframe'
+    });
 
     $('.image-popup').magnificPopup({
         type: 'image',
-        gallery: { enabled: true },
+        gallery: {
+            enabled: true
+        },
         callbacks: {
             open: initPanzoom,
             change: initPanzoom
@@ -169,7 +189,9 @@ $(function () {
     });
 
     // WOW animation
-    new WOW({ boxClass: 'wow' }).init();
+    new WOW({
+        boxClass: 'wow'
+    }).init();
 
     // Audio toggle
     $('#playerVolumeOff').click(() => {
@@ -193,7 +215,12 @@ $(function () {
             height: '100%',
             autoSize: false,
             title: this.title,
-            helpers: { title: { type: 'inside' }, media: {} },
+            helpers: {
+                title: {
+                    type: 'inside'
+                },
+                media: {}
+            },
             beforeShow: function () {
                 $(".fancybox-wrap").addClass("gallery-fancybox");
             }
@@ -208,7 +235,117 @@ $(function () {
         minSize: 10,
         maxSize: 32
     });
+
+    // Initialize album popup
+    $('#ablum1').magnificPopup({
+        items: {
+            src: '#popup-ablum1',
+            type: 'inline'
+        },
+        closeBtnInside: true,
+        mainClass: 'mfp-fade',
+        callbacks: {
+        open: function() {
+            $('.mfp-content').addClass('mfp-ablum');
+        }
+    }
+    });
+
+    $('#ablum2').magnificPopup({
+        items: {
+            src: '#popup-ablum2',
+            type: 'inline'
+        },
+        closeBtnInside: true,
+        mainClass: 'mfp-fade',
+        callbacks: {
+        open: function() {
+            $('.mfp-content').addClass('mfp-ablum');
+        }
+    }
+    });
+
+    // Initialize bookblock ablum1
+    CreateBookBlock('#bb-bookblock_1', '#bb-nav-first_1', '#bb-nav-prev_1', '#bb-nav-next_1', '#bb-nav-last_1', '#popup-ablum1');
+    //CreateBookBlock('#bb-bookblock_2', '#bb-nav-first_2', '#bb-nav-prev_2', '#bb-nav-next_2', '#bb-nav-last_2');
+
 });
+
+function CreateBookBlock(bookBlockId, firstId, prevId, nextId, lastId, divPoupId) {
+    var config = {
+        $bookBlock: $(bookBlockId),
+        $navNext: $(nextId),
+        $navPrev: $(prevId),
+        $navFirst: $(firstId),
+        $navLast: $(lastId)
+    };
+
+    config.$bookBlock.bookblock({
+        speed: 800,
+        shadowSides: 0.8,
+        shadowFlip: 0.7
+    });
+
+    initEvents = function () {
+
+        var $slides = config.$bookBlock.children();
+
+        // add navigation events
+        config.$navNext.on('click touchstart', function () {
+            config.$bookBlock.bookblock('next');
+            return false;
+        });
+
+        config.$navPrev.on('click touchstart', function () {
+            config.$bookBlock.bookblock('prev');
+            return false;
+        });
+
+        config.$navFirst.on('click touchstart', function () {
+            config.$bookBlock.bookblock('first');
+            return false;
+        });
+
+        config.$navLast.on('click touchstart', function () {
+            config.$bookBlock.bookblock('last');
+            return false;
+        });
+
+        // add swipe events
+        $slides.on({
+            'swipeleft': function (event) {
+                config.$bookBlock.bookblock('next');
+                return false;
+            },
+            'swiperight': function (event) {
+                config.$bookBlock.bookblock('prev');
+                return false;
+            }
+        });
+
+        // add keyboard events
+        $(divPoupId).keydown(function (e) {
+            var keyCode = e.keyCode || e.which,
+                arrow = {
+                    left: 37,
+                    up: 38,
+                    right: 39,
+                    down: 40
+                };
+
+            switch (keyCode) {
+                case arrow.left:
+                    config.$bookBlock.bookblock('prev');
+                    break;
+                case arrow.right:
+                    config.$bookBlock.bookblock('next');
+                    break;
+            }
+        });
+    };
+
+    initEvents();
+}
 
 // Init language check and button event
 function RunMyScript() {
