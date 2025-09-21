@@ -244,10 +244,18 @@ $(function () {
             type: 'inline'
         },
         closeBtnInside: true,
-        mainClass: 'mfp-fade',
+        mainClass: 'mfp-fade album-popup',
         callbacks: {
             open: function () {
                 $('.mfp-content').addClass('mfp-ablum');
+                $('.mfp-wrap').css('overflow', 'hidden');
+
+                var $imgWidth = $($('.bb-item').find('img')).width();
+                var $imgHeight = $($('.bb-item').find('img')).height();
+                var $bbWrapper = $('.bb-custom-wrapper nav');
+                $bbWrapper.css('width', $imgWidth + 'px');
+                $bbWrapper.css('height', $imgHeight + 'px');
+
                 // Không cần ẩn thumbnail ở đây nữa
             },
             close: function () {
@@ -324,10 +332,17 @@ $(function () {
             type: 'inline'
         },
         closeBtnInside: true,
-        mainClass: 'mfp-fade',
+         mainClass: 'mfp-fade album-popup',
         callbacks: {
             open: function () {
                 $('.mfp-content').addClass('mfp-ablum');
+                $('.mfp-wrap').css('overflow', 'hidden');
+
+                var $imgWidth = $($('.bb-item').find('img')).width();
+                var $imgHeight = $($('.bb-item').find('img')).height();
+                var $bbWrapper = $('.bb-custom-wrapper nav');
+                $bbWrapper.css('width', $imgWidth + 'px');
+                $bbWrapper.css('height', $imgHeight + 'px');
                 // Không cần ẩn thumbnail ở đây nữa
             },
             close: function () {

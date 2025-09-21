@@ -379,6 +379,82 @@ body:has(.lg-start-zoom) {
     }
 }
 
+.album-popup {
+    .mfp-container {
+        padding: 35px;
+    }
+
+    .popup-ablum,
+    .main,
+    .bb-custom-wrapper {
+        height: 100%;
+    }
+
+    .bb-item {
+        background: none;
+    }
+
+    .bb-item>a {
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bb-item img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.popup-ablum {
+    .bb-inner a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bb-inner a img {
+        max-height: 100%;
+    }
+
+    .mfp-close {
+        color: #fff;
+        margin-top: -25px;
+        margin-right: -20px;
+    }
+
+    .bb-custom-wrapper>nav {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .bb-custom-icon-first,
+        .bb-custom-icon-last {
+            display: none;
+        }
+
+        .bb-custom-icon {
+            height: 100%;
+            width: 50%;
+            font-size: 0;
+        }
+    }
+
+    .bb-custom-icon-arrow-left,
+    .bb-custom-icon-arrow-right {
+        display: flex;
+        align-items: center;
+    }
+}
+
 @keyframes ablumBookInit {
     0% {
         transform: rotateY(0deg);

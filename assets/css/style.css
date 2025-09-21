@@ -1631,6 +1631,68 @@ body:has(.lg-start-zoom) {
   background-color: #b57171 !important;
 }
 
+.album-popup .mfp-container {
+  padding: 35px;
+}
+.album-popup .popup-ablum,
+.album-popup .main,
+.album-popup .bb-custom-wrapper {
+  height: 100%;
+}
+.album-popup .bb-item {
+  background: none;
+}
+.album-popup .bb-item > a {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.album-popup .bb-item img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.popup-ablum .bb-inner a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup-ablum .bb-inner a img {
+  max-height: 100%;
+}
+.popup-ablum .mfp-close {
+  color: #fff;
+  margin-top: -25px;
+  margin-right: -20px;
+}
+.popup-ablum .bb-custom-wrapper > nav {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popup-ablum .bb-custom-wrapper > nav .bb-custom-icon-first,
+.popup-ablum .bb-custom-wrapper > nav .bb-custom-icon-last {
+  display: none;
+}
+.popup-ablum .bb-custom-wrapper > nav .bb-custom-icon {
+  height: 100%;
+  width: 50%;
+  font-size: 0;
+}
+.popup-ablum .bb-custom-icon-arrow-left,
+.popup-ablum .bb-custom-icon-arrow-right {
+  display: flex;
+  align-items: center;
+}
+
 @keyframes ablumBookInit {
   0% {
     transform: rotateY(0deg);
