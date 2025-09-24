@@ -1,7 +1,13 @@
+@import url("../css/GreatVibes.css");
+@font-face {
+  font-family: "Ma Shan Zheng";
+  src: url("./fonts/MaShanZheng-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /*===========================
      01.COMMON css 
 ===========================*/
-@import url("../css/GreatVibes.css");
 body {
   font-family: "Poppins", sans-serif;
   font-weight: normal;
