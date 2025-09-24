@@ -54,10 +54,25 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Great Vibes";
   font-weight: 700;
   color: #38424D;
   margin: 0px;
+}
+body.lang-vi h1,
+body.lang-vi h2,
+body.lang-vi h3,
+body.lang-vi h4,
+body.lang-vi h5,
+body.lang-vi h6 {
+  font-family: "Great Vibes";
+}
+body.lang-zh h1,
+body.lang-zh h2,
+body.lang-zh h3,
+body.lang-zh h4,
+body.lang-zh h5,
+body.lang-zh h6 {
+  font-family: "Noto Sans SC", "Microsoft Yahei", sans-serif;
 }
 
 h1 {
@@ -1040,9 +1055,14 @@ p {
 }
 .coming_soon_count .single_count .count_content .count {
   font-size: 60px;
-  font-family: "Great Vibes";
   color: #fff;
   line-height: 45px;
+}
+body.lang-vi .coming_soon_count .single_count .count_content .count {
+  font-family: "Great Vibes";
+}
+body.lang-zh .coming_soon_count .single_count .count_content .count {
+  font-family: "Noto Sans SC", "Microsoft Yahei", sans-serif;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .coming_soon_count .single_count .count_content .count {

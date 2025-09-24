@@ -58,7 +58,17 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $font-1;
+
+    // Nếu là tiếng Việt
+    body.lang-vi & {
+        font-family: $font-1; // Great Vibes, font tiếng Việt
+    }
+
+    // Nếu là tiếng Trung
+    body.lang-zh & {
+        font-family: $font-zh; // font hỗ trợ tiếng Trung, ví dụ 'Noto Sans SC'
+    }
+
     font-weight: 700;
     color: $black;
     margin: 0px;

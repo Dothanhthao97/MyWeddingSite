@@ -41,50 +41,50 @@ var imageList_1 = [
 ];
 
 var imageList_2 = [
-  "20250622_024227820_iOS.webp",
-  "20250622_024355490_iOS.webp",
-  "20250622_024546760_iOS.webp",
-  "20250622_024730270_iOS.webp",
-  "20250622_024937880_iOS.webp",
-  "20250622_025831460_iOS.webp",
-  "20250622_025850350_iOS.webp",
-  "20250622_030153220_iOS.webp",
-  "20250622_030207670_iOS.webp",
-  "20250622_030302210_iOS.webp",
-  "20250622_030331630_iOS.webp",
-  "20250622_030350270_iOS.webp",
-  "20250622_030527420_iOS.webp",
-  "20250622_031141650_iOS.webp",
-  "20250622_031546730_iOS.webp",
-  "20250622_031816960_iOS.webp"
+    "20250622_024227820_iOS.webp",
+    "20250622_024355490_iOS.webp",
+    "20250622_024546760_iOS.webp",
+    "20250622_024730270_iOS.webp",
+    "20250622_024937880_iOS.webp",
+    "20250622_025831460_iOS.webp",
+    "20250622_025850350_iOS.webp",
+    "20250622_030153220_iOS.webp",
+    "20250622_030207670_iOS.webp",
+    "20250622_030302210_iOS.webp",
+    "20250622_030331630_iOS.webp",
+    "20250622_030350270_iOS.webp",
+    "20250622_030527420_iOS.webp",
+    "20250622_031141650_iOS.webp",
+    "20250622_031546730_iOS.webp",
+    "20250622_031816960_iOS.webp"
 ];
 
 var imageList_4 = [
-  "20250622_041349520_iOS.webp",
-  "20250622_041539550_iOS.webp",
-  "20250622_041633350_iOS.webp",
-  "20250622_041933400_iOS.webp",
-  "20250622_041940350_iOS.webp",
-  "20250622_042019090_iOS.webp",
-  "20250622_042048210_iOS.webp",
-  "20250622_042224180_iOS.webp",
-  "20250622_042445990_iOS.webp",
-  "20250622_042602110_iOS.webp"
+    "20250622_041349520_iOS.webp",
+    "20250622_041539550_iOS.webp",
+    "20250622_041633350_iOS.webp",
+    "20250622_041933400_iOS.webp",
+    "20250622_041940350_iOS.webp",
+    "20250622_042019090_iOS.webp",
+    "20250622_042048210_iOS.webp",
+    "20250622_042224180_iOS.webp",
+    "20250622_042445990_iOS.webp",
+    "20250622_042602110_iOS.webp"
 ];
 
 
 var imageList_3 = [
-  "20250622_051058720_iOS.webp",
-  "20250622_051114490_iOS.webp",
-  "20250622_051243630_iOS.webp",
-  "20250622_051313970_iOS.webp",
-  "20250622_051433990_iOS.webp",
-  "20250622_051602220_iOS.webp",
-  "20250622_052010420_iOS.webp",
-  "20250622_052259930_iOS.webp",
-  "20250622_052441590_iOS.webp",
-  "20250622_053056940_iOS.webp",
-  "20250622_053209650_iOS.webp"
+    "20250622_051058720_iOS.webp",
+    "20250622_051114490_iOS.webp",
+    "20250622_051243630_iOS.webp",
+    "20250622_051313970_iOS.webp",
+    "20250622_051433990_iOS.webp",
+    "20250622_051602220_iOS.webp",
+    "20250622_052010420_iOS.webp",
+    "20250622_052259930_iOS.webp",
+    "20250622_052441590_iOS.webp",
+    "20250622_053056940_iOS.webp",
+    "20250622_053209650_iOS.webp"
 ];
 
 
@@ -156,7 +156,59 @@ function RenderGallery(eleGallery, imageList, folderName, start = 0, count = PAG
     });
 }
 
+function SetLabelVietChinese() {
+    if (CurrentLanguageId === '2051') { // Tiếng việt
+        $('#UrlHome').attr('href', 'index.html');
+
+        $('#btnLanguage').data('languageid', '1066');
+
+        $('#btnGallery').html("Gallery");
+        $('#Title1').html("Concept Dream Future");
+        $('#Title2').html("Concept Studio");
+        $('#Title3').html("Concept Hỷ Phục");
+        $('#Title4').html("Concept Việt Phục");
+
+        $('#TitleFooter').html("Bá Đông <span>&</span> Thanh Thảo");
+        $('#fmenu_1').html("Home");
+        $('#fmenu_2').html("Couple");
+        $('#fmenu_3').html("Story");
+        $('#fmenu_4').html("Gallery");
+        $('#fmenu_5').html("Ablum");
+        $('#fmenu_6').html("Event");
+
+        $('#copyright').html('</p>Designed and Developed by <a href="https://www.facebook.com/donglb97" style="color: #D59A57" rel="nofollow">Bá Đông </a><span> & </span><a href="https://www.facebook.com/thanhthao.bui.927" style="color: #D59A57" rel="nofollow">Thanh Thảo</a><p>');
+    } else {
+        $('#UrlHome').attr('href', 'index_china.html');
+
+        $('#btnLanguage').addClass('lang-vn'); // Tiếng Trung
+        $('#btnLanguage').data('languageid', '2051');
+
+        $('#btnGallery').html("相册");
+        $('#Title1').html("夢幻未來風格");
+        $('#Title2').html("影樓風格");
+        $('#Title3').html("喜服風格");
+        $('#Title4').html("越式服飾風格");
+
+        $('#TitleFooter').html("李柏東 <span>&</span> 杜氏青草");
+        $('#fmenu_1').html("首页");
+        $('#fmenu_2').html("新人");
+        $('#fmenu_3').html("爱情故事");
+        $('#fmenu_4').html("相册");
+        $('#fmenu_5').html("专辑");
+        $('#fmenu_6').html("婚礼活动");
+
+        $('#copyright').html('<p>設計與開發者 <a href="https://www.facebook.com/donglb97" style="color: #D59A57" rel="nofollow">李柏東 </a><span> & </span><a href="https://www.facebook.com/thanhthao.bui.927" style="color: #D59A57" rel="nofollow">杜氏青草</a></p>');
+    }
+}
+
 $(function () {
+
+    // add body class for gallery page
+    if (CurrentLanguageId === '2051') $('body').addClass('lang-vi');
+    else $('body').addClass('lang-zh');
+
+    SetLabelVietChinese();
+
     // Khởi tạo mỗi gallery với 10 ảnh đầu
     galleries.forEach(g => {
         RenderGallery(g.id, g.imageList, g.folder, 0, PAGE_SIZE);

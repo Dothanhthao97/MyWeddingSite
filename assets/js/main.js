@@ -1,3 +1,4 @@
+var CurrentLanguageId = localStorage.getItem('languageId');
 $(function () {
     "use strict";
 
@@ -119,9 +120,9 @@ $(function () {
             const delay = $el.data('delay');
             const animationType = 'animated ' + $el.data('animation');
             $el.css({
-                    'animation-delay': delay,
-                    '-webkit-animation-delay': delay
-                })
+                'animation-delay': delay,
+                '-webkit-animation-delay': delay
+            })
                 .addClass(animationType)
                 .one(animationEndEvents, () => {
                     $el.removeClass(animationType);
@@ -139,16 +140,16 @@ $(function () {
             $this.html(event.strftime(`
                 <div class="coming_soon_count d-flex justify-content-between pt-20">
                     <div class="single_count d-flex align-items-center justify-content-center mt-30">
-                        <div class="count_content"><span class="count">%D</span><p class="times">Ngày</p></div>
+                        <div class="count_content"><span class="count">%D</span><p class="times">${GetLanguageVietChinese("Ngày", "天")}</p></div>
                     </div>
                     <div class="single_count d-flex align-items-center justify-content-center mt-30">
-                        <div class="count_content"><span class="count">%H</span><p class="times">Giờ</p></div>
+                        <div class="count_content"><span class="count">%H</span><p class="times">${GetLanguageVietChinese("Giờ", "小时")}</p></div>
                     </div>
                     <div class="single_count d-flex align-items-center justify-content-center mt-30">
-                        <div class="count_content"><span class="count">%M</span><p class="times">Phút</p></div>
+                        <div class="count_content"><span class="count">%M</span><p class="times">${GetLanguageVietChinese("Phút", "分钟")}</p></div>
                     </div>
                     <div class="single_count d-flex align-items-center justify-content-center mt-30">
-                        <div class="count_content"><span class="count">%S</span><p class="times">Giây</p></div>
+                        <div class="count_content"><span class="count">%S</span><p class="times">${GetLanguageVietChinese("Giây", "秒")}</p></div>
                     </div>
                 </div>`));
         });
@@ -229,7 +230,6 @@ $(function () {
     });
 
     // Heart snow fall
-    document.body.className = "darkBg";
     $(document).snowfall({
         image: "assets/images/heart.png",
         minSize: 10,
@@ -250,8 +250,12 @@ $(function () {
                 $('.mfp-content').addClass('mfp-ablum');
                 $('.mfp-wrap').css('overflow', 'hidden');
 
-                var $imgWidth = $($('.bb-item').find('img')).width();
-                var $imgHeight = $($('.bb-item').find('img')).height();
+                var eleImg = $('.bb-item').filter(function () {
+                    return $(this).css('display') === 'block';
+                }).find('img').first();
+
+                var $imgWidth = eleImg.width();
+                var $imgHeight = eleImg.height();
                 var $bbWrapper = $('.bb-custom-wrapper nav');
                 $bbWrapper.css('width', $imgWidth + 'px');
                 $bbWrapper.css('height', $imgHeight + 'px');
@@ -332,14 +336,18 @@ $(function () {
             type: 'inline'
         },
         closeBtnInside: true,
-         mainClass: 'mfp-fade album-popup',
+        mainClass: 'mfp-fade album-popup',
         callbacks: {
             open: function () {
                 $('.mfp-content').addClass('mfp-ablum');
                 $('.mfp-wrap').css('overflow', 'hidden');
 
-                var $imgWidth = $($('.bb-item').find('img')).width();
-                var $imgHeight = $($('.bb-item').find('img')).height();
+                var eleImg = $('.bb-item').filter(function () {
+                    return $(this).css('display') === 'block';
+                }).find('img').first();
+
+                var $imgWidth = eleImg.width();
+                var $imgHeight = eleImg.height();
                 var $bbWrapper = $('.bb-custom-wrapper nav');
                 $bbWrapper.css('width', $imgWidth + 'px');
                 $bbWrapper.css('height', $imgHeight + 'px');
@@ -416,6 +424,13 @@ $(function () {
     CreateBookBlock('#bb-bookblock_1', '#bb-nav-first_1', '#bb-nav-prev_1', '#bb-nav-next_1', '#bb-nav-last_1', '#popup-ablum1');
     // Initialize bookblock ablum2
     CreateBookBlock('#bb-bookblock_2', '#bb-nav-first_2', '#bb-nav-prev_2', '#bb-nav-next_2', '#bb-nav-last_2', '#popup-ablum2');
+
+    // trigger auto play music
+    $(document).one('click touchstart', function () {
+        document.getElementById("audio-music").play();
+        $('#playerVolumeOn').show();
+        $('#playerVolumeOff').hide();
+    });
 
 });
 
@@ -532,4 +547,14 @@ function initPanzoom() {
             img.addEventListener('click', e => e.stopPropagation());
         }
     }, 100);
+}
+
+function GetLanguageVietChinese(stringViet, stringChinese) {
+    if (CurrentLanguageId == 2051) {
+        return stringViet;
+    } else if (CurrentLanguageId == 1066) {
+        return stringChinese;
+    } else {
+        return stringViet;
+    }
 }

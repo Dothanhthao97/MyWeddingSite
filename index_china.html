@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 
     <!--====== Title ======-->
-    <title>Wedding Day - Bá Đông ❤️ Thanh Thảo</title>
+    <title>我们的婚礼 - 李柏東❤️杜氏青草</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--====== Favicon Icon ======-->
@@ -28,6 +28,9 @@
     <!--====== Bootstrap CSS ======-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
+    <!--====== BookBlock CSS ======-->
+    <link rel="stylesheet" href="assets/css/bookblock.css">
+
     <!--====== Default CSS ======-->
     <link rel="stylesheet" href="assets/css/default.css">
 
@@ -41,7 +44,7 @@
     var photoGalleries = [];
 </script>
 
-<body class="HeartFall">
+<body class="HeartFall lang-zh">
     <div class="preloader">
         <div class="loader">
             <div class="ytp-spinner">
@@ -69,56 +72,88 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto">
                                     <li class="nav-item active">
-                                        <a class="page-scroll" data-id="home">Home</a>
+                                        <a class="page-scroll" data-id="home">首页</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" data-id="couple">Couple</a>
+                                        <a class="page-scroll" data-id="couple">新人</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" data-id="our_love">Story</a>
+                                        <a class="page-scroll" data-id="our_love">爱情故事</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" data-id="gallery">Gallery</a>
+                                        <a class="page-scroll" data-id="gallery">相册</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" data-id="event">Event</a>
+                                        <a class="page-scroll" data-id="ablum">专辑</a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" data-id="event">婚礼安排</a>
+                                    </li>
+
                                     <li class="nav-item buttons-language">
-                                        <a class="page-scroll changelang lang-vn" id="btnLanguage" data-languageid="2051"></a>                                        
+                                        <a class="page-scroll changelang lang-vn" id="btnLanguage"
+                                            data-languageid="2051"></a>
                                     </li>
                                 </ul>
                             </div> <!-- navbar collapse -->
                         </nav> <!-- navbar -->
                     </div>
-                    
+
                 </div> <!-- row -->
             </div> <!-- container -->
         </div> <!-- header navbar -->
-        <div id="home " class="carousel slide" data-ride="carousel">
+        <div id="home" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="single_slider bg_cover d-flex align-items-center"
-                        style="background-image: url(assets/images/slider-1.jpg)">
+                        style="background-image: url(assets/images/slider-1.png)">
 
                     </div> <!-- single slider -->
                 </div>
                 <div class="carousel-item">
                     <div class="single_slider bg_cover d-flex align-items-center"
-                        style="background-image: url(assets/images/slider-2.jpg)">
+                        style="background: url(assets/images/slider-2.png) top -80px center/cover no-repeat local; ">
+
+                    </div> <!-- single slider -->
+                </div>
+                <div class="carousel-item">
+                    <div class="single_slider bg_cover d-flex align-items-center"
+                        style="background: url(assets/images/slider-3.png) center center/cover no-repeat local;">
+
+                    </div> <!-- single slider -->
+                </div>
+                <div class="carousel-item">
+                    <div class="single_slider bg_cover d-flex align-items-center"
+                        style="background-image: url(assets/images/slider-4.png)">
+
+                    </div> <!-- single slider -->
+                </div>
+                <div class="carousel-item">
+                    <div class="single_slider bg_cover d-flex align-items-center"
+                        style="background: url(assets/images/slider-5.png) top -80px center/cover no-repeat local;">
 
                     </div> <!-- single slider -->
                 </div>
             </div>
+            <!-- Thêm hai nút điều khiển dưới đây -->
+            <a class="carousel-control-prev" href="#home" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#home" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
             <div class="container slider-fixed">
                 <div class="row justify-content-center">
                     <div class="col-lg-12">
                         <div class="slider_content text-center">
-                            <h5 class="slider_sub_title animated fadeInDown">WE ARE GETTING MARRIED</h5>
-                            <h2 class="slider_title animated fadeInDown">Bá Đông <span>&</span> Thanh Thảo</h2>
-                            <span class="location animated fadeInUp">Á Đông RiverSide</span>
+                            <h5 class="slider_sub_title animated fadeInDown">我们结婚啦</h5>
+                            <h2 class="slider_title animated fadeInDown">李柏東 <span>&</span> 杜氏青草</h2>
+                            <span class="location animated fadeInUp">亞東婚慶中心</span>
                             <p class="animated fadeInUp">
                                 <img src="assets/images/header-shape-1.png" alt="Shape">
-                                29 November 2025
+                                2025年11月29日
                                 <img src="assets/images/header-shape-2.png" alt="Shape">
                             </p>
                         </div> <!-- slider content -->
@@ -136,7 +171,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section_title text-center pb-30">
-                        <h3 class="title">Lovely Couple</h3>
+                        <h3 class="title">新人</h3>
                         <img src="assets/images/section_shape.png" alt="Shape">
                     </div> <!-- section title -->
                 </div>
@@ -145,18 +180,24 @@
                 <div class="col-md-6">
                     <div class="single_couple mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
                         <div class="couple_image">
-                            <img src="assets/images/couple-1.jpg" alt="Couple">
+                            <img src="assets/images/avarta_1.png" alt="Couple">
                         </div>
                         <div class="couple_content text-center">
                             <img class="shape" src="assets/images/couple-shape.png" alt="shape">
-                            <h4 class="couple_name">Lý Bá Đông</h4>
-                            <p>Xin chào mình là Lý Bá Đông, là một người hiền lành và ít nói. Luôn coi trọng tình cảm và yêu thương gia đình. 
-                                Với mình: “Gia đình là điểm tựa vững chắc nhất và là bến đỗ bình yên không đâu sánh bằng đối với mỗi con người. 
-                                Đó luôn là nơi tràn ngập tình yêu thương để ta trở về!"</p>
+                            <h4 class="couple_name">李柏東</h4>
+                            <p>你好，我是李柏東，是一個性格溫和、話不多的人。
+                                我一直很重視感情，深愛著我的家庭。
+                                <br />
+                                對我來說：「家庭是最堅實的依靠，是每個人心中最安寧的港灣。
+                                那是一個充滿愛與溫暖的地方，永遠值得我們歸來！」
+                            </p>
                             <ul class="social">
-                                <li><a href="https://www.facebook.com/donglb97"><i class="lni lni-facebook-filled"></i></a></li>
-                                <li style="opacity: .6; cursor: default; pointer-events: none;"><a href="#"><i class="lni lni-twitter-original"></i></a></li>
-                                <li style="opacity: .6; cursor: default; pointer-events: none;"><a href="#"><i class="lni lni-instagram-original"></i></a></li>
+                                <li><a href="https://www.facebook.com/donglb97"><i
+                                            class="lni lni-facebook-filled"></i></a></li>
+                                <li style="opacity: .6; cursor: default; pointer-events: none;"><a href="#"><i
+                                            class="lni lni-twitter-original"></i></a></li>
+                                <li style="opacity: .6; cursor: default; pointer-events: none;"><a href="#"><i
+                                            class="lni lni-instagram-original"></i></a></li>
                                 <!-- <li style="opacity: .6; cursor: default; pointer-events: none;"><a href="#"><i class="lni lni-linkedin-original"></i></a></li> -->
                             </ul>
                         </div>
@@ -165,19 +206,23 @@
                 <div class="col-md-6">
                     <div class="single_couple mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.6s">
                         <div class="couple_image">
-                            <img src="assets/images/couple-2.jpg" alt="Couple">
+                            <img src="assets/images/avarta_2.png" alt="Couple">
                         </div>
                         <div class="couple_content text-center">
                             <img class="shape" src="assets/images/couple-shape.png" alt="shape">
-                            <h4 class="couple_name">Đỗ Thị Thanh Thảo</h4>
-                            <p>Xin chào mình là Đỗ Thị Thanh Thảo đến từ Quảng Ngãi, hiện đang sinh sống 
-                                và làm việc tại TPHCM. Là một cô gái hay cười nhưng lại sống nội tâm, 
-                                thích đi du lịch, xem phim và nấu ăn. Ngoài ra còn rất thích trồng cây, nuôi ước mơ có cho mình một vườn cây nhỏ.</p>
+                            <h4 class="couple_name">杜氏青草</h4>
+                            <p>你好，我是杜氏清草，來自廣義，目前在胡志明市生活和工作。
+                                我是一個愛笑、卻內心細膩的女孩，喜歡旅遊、看電影和做飯。
+                                除此之外，我還特別喜歡種植物，夢想著將來擁有一個屬於自己的小花園。</p>
                             <ul class="social">
-                                <li><a href="https://www.facebook.com/thaodtt97"><i class="lni lni-facebook-filled"></i></a></li>
-                                <li><a href="https://twitter.com/Thao300597"><i class="lni lni-twitter-original"></i></a></li>
-                                <li><a href="https://www.instagram.com/thanhthaoqng?igsh=MWtiZHZ6bW83YXVrMg=="><i class="lni lni-instagram-original"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/thanh-th%E1%BA%A3o-8406b7117/"><i class="lni lni-linkedin-original"></i></a></li>
+                                <li><a href="https://www.facebook.com/thaodtt97"><i
+                                            class="lni lni-facebook-filled"></i></a></li>
+                                <li><a href="https://twitter.com/Thao300597"><i
+                                            class="lni lni-twitter-original"></i></a></li>
+                                <li><a href="https://www.instagram.com/thanhthaoqng?igsh=MWtiZHZ6bW83YXVrMg=="><i
+                                            class="lni lni-instagram-original"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/thanh-th%E1%BA%A3o-8406b7117/"><i
+                                            class="lni lni-linkedin-original"></i></a></li>
                             </ul>
                         </div>
                     </div> <!-- single couple -->
@@ -188,7 +233,7 @@
 
     <!--====== COUPLE PART ENDS ======-->
 
-    <!--====== COMING SOON PART START ======-->
+    <!--====== COUNT DOWN PART START ======-->
 
     <section id="coming_soon" class="coming_soon_area pt-20 pb-70">
         <div class="coming_soon_shape_1">
@@ -199,8 +244,8 @@
                 <div class="col-lg-4">
                     <div class="section_title pt-50 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.2s"
                         style="visibility: visible; animation-duration: 1.3s; animation-delay: 0.2s; animation-name: fadeIn;">
-                        <h3 class="title">Event Date</h3>
-                        <p>29 November 2025</p>
+                        <h3 class="title">举办日期</h3>
+                        <p>2025年11月29日</p>
                         <img src="assets/images/section_shape.png" alt="Shape">
                     </div>
                 </div>
@@ -210,22 +255,22 @@
                         <div class="coming_soon_count d-flex justify-content-between pt-20">
                             <div class="single_count d-flex align-items-center justify-content-center mt-30">
                                 <div class="count_content"><span class="count">00</span>
-                                    <p class="times">Days</p>
+                                    <p class="times">天</p>
                                 </div>
                             </div>
                             <div class="single_count d-flex align-items-center justify-content-center mt-30">
                                 <div class="count_content"><span class="count">00</span>
-                                    <p class="times">Hourd</p>
+                                    <p class="times">小时</p>
                                 </div>
                             </div>
                             <div class="single_count d-flex align-items-center justify-content-center mt-30">
                                 <div class="count_content"><span class="count">00</span>
-                                    <p class="times">Minits</p>
+                                    <p class="times">分钟</p>
                                 </div>
                             </div>
                             <div class="single_count d-flex align-items-center justify-content-center mt-30">
                                 <div class="count_content"><span class="count">00</span>
-                                    <p class="times">Seconds</p>
+                                    <p class="times">秒</p>
                                 </div>
                             </div>
                         </div>
@@ -238,7 +283,7 @@
         </div>
     </section>
 
-    <!--====== COMING SOON PART ENDS ======-->
+    <!--====== COUNT DOWN PART ENDS ======-->
 
     <!--====== OUR LOVE PART START ======-->
 
@@ -247,7 +292,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section_title text-center pb-30">
-                        <h3 class="title">Our Love Story</h3>
+                        <h3 class="title">我们的爱情故事</h3>
                         <img src="assets/images/section_shape.png" alt="Shape">
                     </div> <!-- section title -->
                 </div>
@@ -256,89 +301,101 @@
                 <div class="single_love d-flex flex-wrap align-items-center">
                     <div class="love_content order-md-last wow fadeInLeftBig" data-wow-duration="1.3s"
                         data-wow-delay="0.4s">
-                        <h3 class="love_title">Ngày tỏ tình</h3>
-                        <p>Bị ấn tượng bởi sự chăm chỉ và thành tích học tập, mình cùng các bạn đã bầu anh làm Bí thư lớp.
-                        Từ đó, hai đứa bắt đầu đồng hành – từ những buổi học nhóm, hoạt động Đoàn – Hội, đến những chiến dịch tình nguyện rực
-                        rỡ.
-                        
-                        Rồi một ngày đẹp trời, khi nắng nhẹ và gió vừa đủ, anh nắm tay mình thật khẽ và thủ thỉ bên tai:  "Làm bạn gái anh nha!" ♥♥♥</p>
+                        <h3 class="love_title">表白日</h3>
+                        <p>被他的努力和学习成绩所打动，我和同学们一致推举他为班长。
+                            从那时起，我们开始了一起的旅程——从小组学习、团委活动，到绚丽的志愿者活动。
+                            <br>
+                            然后有一天，阳光明媚，微风正好，他轻轻握住我的手，在我耳边低语：“做我女朋友好吗！” ♥♥♥
+                        </p>
                     </div>
                     <div class="love_date">
-                        <p><i class="lni lni-heart-filled"></i> 20 Feb 2016</p>
+                        <p><i class="lni lni-heart-filled"></i> 2016年<br>2<br>月<br>20<br>日</p>
                     </div>
                     <div class="love_image order-md-first wow fadeInRightBig" data-wow-duration="1.3s"
                         data-wow-delay="0.4s">
-                        <img src="assets/images/love-1.jpg" alt="love">
+                        <div class="boxLoveStory loveStory1">
+                            <img src="assets/images/LoveStory1.jpg" alt="love">
+                        </div>
                     </div>
                 </div> <!-- single love -->
 
                 <div class="single_love d-flex flex-wrap align-items-center">
                     <div class="love_content text-lg-right wow fadeInRightBig" data-wow-duration="1.3s"
                         data-wow-delay="0.4s">
-                        <h3 class="love_title">Lễ tốt nghiệp</h3>
-                        <p>Bước qua cánh cổng đại học, như thể mở ra một chương mới trong cuốn sách cuộc đời.
-                        Không còn là những ngày học nhóm, nhưng lại là hành trình trưởng thành thật sự – nơi hai đứa cùng nhau viết tiếp những
-                        ước mơ và dự định tương lai.
-                        
-                        Tốt nghiệp không phải là kết thúc, mà là bắt đầu.
-                        Hành trình phía trước có thể nhiều thử thách, nhưng thật may… chúng ta có nhau.</p>
+                        <h3 class="love_title">毕业典礼</h3>
+                        <p>走过大学的门槛，仿佛打开了人生新篇章。
+                            不再是那些小组学习的日子，而是真正的成长之旅 - 在这里，我们共同书写着
+                            未来的梦想和计划。
+                            <br>
+                            毕业不是结束，而是开始。
+                            前方的旅程可能充满挑战，但幸运的是……我们有彼此。
+                        </p>
                     </div>
                     <div class="love_date">
-                        <p><i class="lni lni-heart-filled"></i> 11 Sep 2020</p>
+                        <p><i class="lni lni-heart-filled"></i> 2020<br>年<br>9<br>月<br>11<br>日</p>
                     </div>
                     <div class="love_image wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.4s">
-                        <img src="assets/images/love-2.jpg" alt="love">
+                        <div class="boxLoveStory loveStory2">
+                            <img src="assets/images/LoveStory2.jpg" alt="love">
+                        </div>
                     </div>
                 </div> <!-- single love -->
 
                 <div class="single_love d-flex flex-wrap align-items-center">
                     <div class="love_content order-md-last wow fadeInLeftBig" data-wow-duration="1.3s"
                         data-wow-delay="0.4s">
-                        <h3 class="love_title">Cùng nhau cố gắng</h3>
-                        <p>Làm mọi thứ cùng nhau, đi mọi nơi cùng nhau, cùng nhau lên kế hoạch cho cuộc sống.
-                        Luôn bên nhau cả những lúc mệt mỏi nhất – trừ vài lần cãi nhau lặt vặt, mà cũng không giận được lâu.
-                        Chúng ta không hoàn hảo, nhưng vẫn luôn chọn ở lại cùng nhau.</p>
+                        <h3 class="love_title">一起努力</h3>
+                        <p>一起做所有事情，一起去所有地方，一起规划生活。
+                            在最疲惫的时刻始终相伴——除了几次琐碎的争吵，也不会生气太久。
+                            我们并不完美，但始终选择在一起。</p>
                     </div>
                     <div class="love_date">
-                        <p><i class="lni lni-heart-filled"></i> 2020 - 2024</p>
+                        <p><i class="lni lni-heart-filled"></i> 2020 <br>年<br> - <br>2024<br>年</p>
                     </div>
                     <div class="love_image order-md-first wow fadeInRightBig" data-wow-duration="1.3s"
                         data-wow-delay="0.4s">
-                        <img src="assets/images/love-1.jpg" alt="love">
+                        <div class="boxLoveStory loveStory3">
+                            <img src="assets/images/LoveStory3.jpg" alt="love">
+                        </div>
                     </div>
                 </div> <!-- single love -->
 
                 <div class="single_love d-flex flex-wrap align-items-center">
                     <div class="love_content text-lg-right wow fadeInRightBig" data-wow-duration="1.3s"
                         data-wow-delay="0.4s">
-                        <h3 class="love_title">Khoảnh khắc cầu hôn</h3>
-                        <p>8 năm bên nhau, đủ để hiểu rằng tình yêu không chỉ là cảm xúc, mà là sự chọn lựa mỗi ngày.
-                        Từ hai người xa lạ bước vào cuộc đời nhau, yêu, trưởng thành, vượt qua những khó khăn...
-                        
-                        Và rồi một ngày, khi anh khẽ nói:
-                        “Làm vợ anh nhé!”
-                        Em đã nguyện ý – đi đâu cũng được, miễn là cùng anh.</p>
+                        <h3 class="love_title">求婚的瞬间</h3>
+                        <p>八年的相伴，让我明白，爱情不仅仅是情感，而是每天的选择。
+                            从两个陌生人走进彼此的生活，爱、成长、克服困难……
+                            <br>
+                            然后有一天，当他说：
+                            “做我的妻子好吗？”
+                            我愿意 - 去哪里都可以，只要和你在一起。
+                        </p>
                     </div>
                     <div class="love_date">
-                        <p><i class="lni lni-heart-filled"></i> 27 Apr 2024</p>
+                        <p><i class="lni lni-heart-filled"></i> 2024<br>年<br>4<br>月<br>27<br>日</p>
                     </div>
                     <div class="love_image wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.4s">
-                        <img src="assets/images/love-2.jpg" alt="love">
+                        <div class="boxLoveStory loveStory4">
+                            <img src="assets/images/LoveStory4.jpg" alt="love">
+                        </div>
                     </div>
                 </div> <!-- single love -->
 
                 <div class="single_love d-flex flex-wrap align-items-center">
                     <div class="love_content order-md-last wow fadeInLeftBig" data-wow-duration="1.3s"
                         data-wow-delay="0.4s">
-                        <h3 class="love_title">Lễ thành hôn</h3>
-                        <p>“Biến em thành cô dâu hạnh phúc nhất” – anh từng nói,         và anh đã làm được.</p>
+                        <h3 class="love_title">婚礼典礼</h3>
+                        <p>“我要让你成为最幸福的新娘” - 你曾这样说，而你真的做到了。</p>
                     </div>
                     <div class="love_date">
-                        <p><i class="lni lni-heart-filled"></i> 27 Apr 2024</p>
+                        <p><i class="lni lni-heart-filled"></i> 2024<br>年<br>4<br>月<br>27<br>日</p>
                     </div>
                     <div class="love_image order-md-first wow fadeInRightBig" data-wow-duration="1.3s"
                         data-wow-delay="0.4s">
-                        <img src="assets/images/love-3.jpg" alt="love">
+                        <div class="boxLoveStory loveStory5">
+                            <img src="assets/images/LoveStory5.jpg" alt="love">
+                        </div>
                     </div>
                 </div> <!-- single love -->
             </div> <!-- love wrapper -->
@@ -350,18 +407,25 @@
     <!--====== GALLERY PART START ======-->
 
     <section id="video" class="video-section event-section section-padding pt-120">
-        <div class="top-area" style="background: url(https://cdn.biihappy.com/ziiweb/website/662f5cd0f706ebd15c019cfd/templates/6174ef83a62963738e0a367c/b20122546c3d16a8232e506a4afce96c.jpg) center center/cover no-repeat local;">
-            <h2>Our Love Video</h2>
-            <img src="assets/images/section_shape.png" alt="Shape" style="filter: brightness(0) invert(1); margin-block: 10px 20px; ">
-            <p>Được ai đó yêu sâu sắc sẽ mang lại cho bạn sức mạnh, trong khi yêu ai đó sâu sắc sẽ cho bạn dũng khí.</p>
+        <div class="top-area"
+            style="background: url(./assets/images/video_background.png) top -80px center/cover no-repeat local; ">
+            <h2>我们的爱情视频</h2>
+            <img src="assets/images/section_shape.png" alt="Shape"
+                style="filter: brightness(0) invert(1); margin-block: 10px 20px; ">
+            <p>被某人深深愛著會給你力量，而深深愛著某人會給你勇氣。</p>
             <div class="video-btn">
-                <a href="https://www.youtube.com/embed/D0DhxluroGk" class="video-play-btn " data-type="iframe">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
+                <a href="https://www.youtube.com/embed/HAdctzxm9VY" class="video-play-btn " data-type="iframe">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                        width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
 
                         <defs>
                         </defs>
-                        <g style="fill: rgb(255, 255, 255);" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                            <path d="M 81.73 50.284 c 4.068 -2.349 4.068 -8.22 0 -10.569 L 48.051 20.271 L 14.372 0.827 c -4.068 -2.349 -9.153 0.587 -9.153 5.284 V 45 v 38.889 c 0 4.697 5.085 7.633 9.153 5.284 l 33.679 -19.444 L 81.73 50.284 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255, 255, 255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        <g style="fill: rgb(255, 255, 255);"
+                            transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                            <path
+                                d="M 81.73 50.284 c 4.068 -2.349 4.068 -8.22 0 -10.569 L 48.051 20.271 L 14.372 0.827 c -4.068 -2.349 -9.153 0.587 -9.153 5.284 V 45 v 38.889 c 0 4.697 5.085 7.633 9.153 5.284 l 33.679 -19.444 L 81.73 50.284 z"
+                                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255, 255, 255); fill-rule: nonzero; opacity: 1;"
+                                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
                         </g>
                     </svg>
                 </a>
@@ -369,317 +433,138 @@
         </div>
     </section>
 
-    <!--====== GALLERY PART START ======-->
-    
+    <!--====== GALLERY PART ENDS ======-->
+
     <!--====== GALLERY PART START ======-->
 
-    <section id="gallery" class="gallery_area pt-120">
+    <section id="gallery" class="gallery_area event-section section-padding pt-120">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section_title text-center pb-30">
-                        <h3 class="title">Our Love Gallery</h3>
+                        <h3 class="title">我们的爱情相册</h3>
                         <img src="assets/images/section_shape.png" alt="Shape">
                     </div>
                 </div>
             </div>
-        </div>  
-        <div class="container gallery_wrapper">
-            <div class="gallery-container gallery-fancybox masonry-gallery">
-                <script type="text/javascript">
-                    photoGalleries.push({
-                        src: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5414066967b374d0f32ca/large.jpg",
-                        thumb: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5414066967b374d0f32ca/small.jpg",
-                        subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                    });
-                </script>
-
-                <div class="grid grid-item btn-see-more-gallery wow pulse" data-index="0">
-                    <a href="javascript:void(0)">
-                        <img src="https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5414066967b374d0f32ca/small.jpg"
-                            alt class="img img-responsive">
-                    </a>
-                </div>
-                <script type="text/javascript">
-                    photoGalleries.push({
-                        src: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5408432101000f0078964/large.jpg",
-                        thumb: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5408432101000f0078964/small.jpg",
-                        subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                    });
-                </script>
-
-                <div class="grid grid-item btn-see-more-gallery wow pulse" data-index="1">
-                    <a href="javascript:void(0)">
-                        <img src="https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5408432101000f0078964/small.jpg"
-                            alt class="img img-responsive">
-                    </a>
-                </div>
-                <script type="text/javascript">
-                    photoGalleries.push({
-                        src: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540874e17cffb47028ff7/large.jpg",
-                        thumb: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540874e17cffb47028ff7/small.jpg",
-                        subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                    });
-                </script>
-
-                <div class="grid grid-item btn-see-more-gallery wow pulse" data-index="2">
-                    <a href="javascript:void(0)">
-                        <img src="https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540874e17cffb47028ff7/small.jpg"
-                            alt class="img img-responsive">
-                    </a>
-                </div>
-                <script type="text/javascript">
-                    photoGalleries.push({
-                        src: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540f7f7d37baf58000637/large.jpg",
-                        thumb: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540f7f7d37baf58000637/small.jpg",
-                        subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                    });
-                </script>
-
-                <div class="grid grid-item btn-see-more-gallery wow pulse" data-index="3">
-                    <a href="javascript:void(0)">
-                        <img src="https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540f7f7d37baf58000637/small.jpg"
-                            alt class="img img-responsive">
-                    </a>
-                </div>
-                <script type="text/javascript">
-                    photoGalleries.push({
-                        src: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f54051f7d37baf58000636/large.jpg",
-                        thumb: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f54051f7d37baf58000636/small.jpg",
-                        subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                    });
-                </script>
-
-                <div class="grid grid-item btn-see-more-gallery wow pulse" data-index="4">
-                    <a href="javascript:void(0)">
-                        <img src="https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f54051f7d37baf58000636/small.jpg"
-                            alt class="img img-responsive">
-                    </a>
-                </div>
-                <script type="text/javascript">
-                    photoGalleries.push({
-                        src: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f54d5615db60497d08242a/large.jpg",
-                        thumb: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f54d5615db60497d08242a/small.jpg",
-                        subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                    });
-                </script>
-
-                <div class="grid grid-item btn-see-more-gallery wow pulse" data-index="5">
-                    <a href="javascript:void(0)">
-                        <img src="https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f54d5615db60497d08242a/small.jpg"
-                            alt class="img img-responsive">
-                    </a>
-                </div>
-                <script type="text/javascript">
-                    photoGalleries.push({
-                        src: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5410ca06a739db70282ea/large.jpg",
-                        thumb: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5410ca06a739db70282ea/small.jpg",
-                        subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                    });
-                </script>
-
-                <div class="grid grid-item btn-see-more-gallery wow pulse" data-index="6">
-                    <a href="javascript:void(0)">
-                        <img src="https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5410ca06a739db70282ea/small.jpg"
-                            alt class="img img-responsive">
-                    </a>
-                </div>
-                <script type="text/javascript">
-                    photoGalleries.push({
-                        src: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5409868c640fce5063b9c/large.jpg",
-                        thumb: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5409868c640fce5063b9c/small.jpg",
-                        subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                    });
-                </script>
-
-                <div class="grid grid-item btn-see-more-gallery wow pulse" data-index="7">
-                    <a href="javascript:void(0)">
-                        <img src="https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5409868c640fce5063b9c/small.jpg"
-                            alt class="img img-responsive">
-                    </a>
-                </div>
-                <script type="text/javascript">
-                    photoGalleries.push({
-                        src: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540a04e17cffb47028ff8/large.jpg",
-                        thumb: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540a04e17cffb47028ff8/small.jpg",
-                        subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                    });
-                </script>
-
-                <div class="grid grid-item btn-see-more-gallery wow pulse" data-index="8">
-                    <a href="javascript:void(0)">
-                        <img src="https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540a04e17cffb47028ff8/small.jpg"
-                            alt class="img img-responsive">
-                    </a>
-                </div>
-                <script type="text/javascript">
-                    photoGalleries.push({
-                        src: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540ac29ee14a34701124e/large.jpg",
-                        thumb: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540ac29ee14a34701124e/small.jpg",
-                        subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                    });
-                </script>
-
-                <div class="grid grid-item btn-see-more-gallery wow pulse" data-index="9">
-                    <a href="javascript:void(0)">
-                        <img src="https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540ac29ee14a34701124e/small.jpg"
-                            alt class="img img-responsive">
-                    </a>
-                </div>
-                <script type="text/javascript">
-                    photoGalleries.push({
-                        src: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f54119f7d37baf58000638/large.jpg",
-                        thumb: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f54119f7d37baf58000638/small.jpg",
-                        subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                    });
-                </script>
-
-                <script type="text/javascript">
-                    photoGalleries.push({
-                        src: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5412c1864a98666013406/large.jpg",
-                        thumb: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f5412c1864a98666013406/small.jpg",
-                        subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                    });
-                </script>
-
-                <script type="text/javascript">
-                    photoGalleries.push({
-                        src: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540c5ccd5dadd6b021d57/large.jpg",
-                        thumb: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540c5ccd5dadd6b021d57/small.jpg",
-                        subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                    });
-                </script>
-
-                <script type="text/javascript">
-                    photoGalleries.push({
-                        src: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540b454016df65e073aa8/large.jpg",
-                        thumb: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540b454016df65e073aa8/small.jpg",
-                        subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                    });
-                </script>
-
-                <script type="text/javascript">
-                    photoGalleries.push({
-                        src: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540ea328674b35c04903b/large.jpg",
-                        thumb: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540ea328674b35c04903b/small.jpg",
-                        subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                    });
-                </script>
-
-                <script type="text/javascript">
-                    photoGalleries.push({
-                        src: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540fea06a739db70282e9/large.jpg",
-                        thumb: "https://cdn.biihappy.com/ziiweb/website/65f41f41ee81007c740076aa/galleries/65f540fea06a739db70282e9/small.jpg",
-                        subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                    });
-                </script>
-
-            </div>
         </div>
 
-
-        <!-- <div class="gallery_wrapper">
+        <div class="gallery_wrapper">
             <div class="container-fluid">
                 <div class="row no-gutters">
+
                     <div class="col-lg-3 col-sm-6">
-                        <div class="single_gallery">
+                        <div class="single_gallery wow fadeInDown">
                             <div class="gallery_image">
-                                <img src="assets/images/gallery-1.jpg" alt="gallery">
+                                <img src="assets/images/Gallery/Dream/20250612_225056700_iOS.webp" alt="gallery">
                             </div>
                             <div class="gallery_content">
                                 <ul class="gallery_icon">
-                                    <li><a class="image-popup" href="assets/images/gallery-1.jpg"><i
+                                    <li><a class="image-popup"
+                                            href="assets/images/Gallery/Dream/20250612_225056700_iOS.webp"><i
                                                 class="lni lni-zoom-in"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
-                        <div class="single_gallery">
+                        <div class="single_gallery wow fadeInDown">
                             <div class="gallery_image">
-                                <img src="assets/images/gallery-2.jpg" alt="gallery">
+                                <img src="assets/images/Gallery/Dream/20250613_002704190_iOS.webp" alt="gallery">
                             </div>
                             <div class="gallery_content">
                                 <ul class="gallery_icon">
-                                    <li><a class="image-popup" href="assets/images/gallery-2.jpg"><i
+                                    <li><a class="image-popup"
+                                            href="assets/images/Gallery/Dream/20250613_002704190_iOS.webp"><i
                                                 class="lni lni-zoom-in"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
-                        <div class="single_gallery">
+                        <div class="single_gallery wow fadeInDown">
                             <div class="gallery_image">
-                                <img src="assets/images/gallery-3.jpg" alt="gallery">
+                                <img src="assets/images/Gallery/Dream/20250613_012910430_iOS.webp" alt="gallery">
                             </div>
                             <div class="gallery_content">
                                 <ul class="gallery_icon">
-                                    <li><a class="image-popup" href="assets/images/gallery-3.jpg"><i
+                                    <li><a class="image-popup"
+                                            href="assets/images/Gallery/Dream/20250613_012910430_iOS.webp"><i
                                                 class="lni lni-zoom-in"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
-                        <div class="single_gallery">
+                        <div class="single_gallery wow fadeInDown">
                             <div class="gallery_image">
-                                <img src="assets/images/gallery-4.jpg" alt="gallery">
+                                <img src="assets/images/Gallery/Studio/20250622_025831460_iOS.webp" alt="gallery">
                             </div>
                             <div class="gallery_content">
                                 <ul class="gallery_icon">
-                                    <li><a class="image-popup" href="assets/images/gallery-4.jpg"><i
+                                    <li><a class="image-popup"
+                                            href="assets/images/Gallery/Studio/20250622_025831460_iOS.webp"><i
                                                 class="lni lni-zoom-in"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
-                        <div class="single_gallery">
+                        <div class="single_gallery wow fadeInDown">
                             <div class="gallery_image">
-                                <img src="assets/images/gallery-5.jpg" alt="gallery">
+                                <img src="assets/images/Gallery/HyPhuc/20250622_053056940_iOS.webp" alt="gallery"
+                                    style="object-position: top;">
                             </div>
                             <div class="gallery_content">
                                 <ul class="gallery_icon">
-                                    <li><a class="image-popup" href="assets/images/gallery-5.jpg"><i
+                                    <li>
+                                        <a class="image-popup"
+                                            href="assets/images/Gallery/HyPhuc/20250622_053056940_iOS.webp">
+                                            <i class="lni lni-zoom-in"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single_gallery wow fadeInDown">
+                            <div class="gallery_image">
+                                <img src="assets/images/Gallery/HyPhuc/20250622_051433990_iOS.webp" alt="gallery">
+                            </div>
+                            <div class="gallery_content">
+                                <ul class="gallery_icon">
+                                    <li><a class="image-popup"
+                                            href="assets/images/Gallery/HyPhuc/20250622_051433990_iOS.webp"><i
                                                 class="lni lni-zoom-in"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
-                        <div class="single_gallery">
+                        <div class="single_gallery wow fadeInDown">
                             <div class="gallery_image">
-                                <img src="assets/images/gallery-6.jpg" alt="gallery">
+                                <img src="assets/images/Gallery/VietPhuc/20250622_042602110_iOS.webp" alt="gallery"
+                                    style="object-position: top;">
                             </div>
                             <div class="gallery_content">
                                 <ul class="gallery_icon">
-                                    <li><a class="image-popup" href="assets/images/gallery-6.jpg"><i
+                                    <li><a class="image-popup"
+                                            href="assets/images/Gallery/VietPhuc/20250622_042602110_iOS.webp"><i
                                                 class="lni lni-zoom-in"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
-                        <div class="single_gallery">
+                        <div class="single_gallery wow fadeInDown">
                             <div class="gallery_image">
-                                <img src="assets/images/gallery-7.jpg" alt="gallery">
+                                <img src="assets/images/Gallery/VietPhuc/20250622_042445990_iOS.webp" alt="gallery">
                             </div>
                             <div class="gallery_content">
                                 <ul class="gallery_icon">
-                                    <li><a class="image-popup" href="assets/images/gallery-7.jpg"><i
-                                                class="lni lni-zoom-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="single_gallery">
-                            <div class="gallery_image">
-                                <img src="assets/images/gallery-8.jpg" alt="gallery">
-                            </div>
-                            <div class="gallery_content">
-                                <ul class="gallery_icon">
-                                    <li><a class="image-popup" href="assets/images/gallery-8.jpg"><i
+                                    <li><a class="image-popup"
+                                            href="assets/images/Gallery/VietPhuc/20250622_042445990_iOS.webp"><i
                                                 class="lni lni-zoom-in"></i></a></li>
                                 </ul>
                             </div>
@@ -687,10 +572,190 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+
+            <div class="box-see-more wow fadeInDown">
+                <a href="gallery.html"><span>更多 </span><i class="lg-next lg-icon"></i></a>
+            </div>
+        </div>
     </section>
 
     <!--====== GALLERY PART ENDS ======-->
+
+    <!--====== ABLUM PART START ======-->
+
+    <section id="ablum" class="ablum_area event-section section-padding pt-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center pb-30">
+                        <h3 class="title">爱情相册</h3>
+                        <img src="assets/images/section_shape.png" alt="Shape">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ablum_wrapper">
+            <div class="box-content-ablum row">
+                <div class="box-ablum col-lg-6 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.6s">
+                    <a id="ablum1" class="ablum-popup">
+                        <div class="box-text-ablum">
+                            <h3>浪漫 - 甜蜜</h3>
+                            <p>"開始一段終生的旅程"</p>
+                        </div>
+                        <div class="box-ablum-image-container">
+                            <div class="box-ablum-image wow shakeX" data-wow-duration="1.3s" data-wow-delay="0.6s">
+                                <img src="assets/images/album-1.png" alt="ablum">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="popup-ablum1" class="popup-ablum mfp-hide">
+                    <div class="main clearfix">
+                        <div class="bb-custom-wrapper">
+                            <div id="bb-bookblock_1" class="bb-bookblock">
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum1/Layout_1.jpg" alt="Layout_1" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum1/Layout_2.jpg" alt="Layout_2" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum1/Layout_3.jpg" alt="Layout_3" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum1/Layout_4.jpg" alt="Layout_4" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum1/Layout_5.jpg" alt="Layout_5" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum1/Layout_6.jpg" alt="Layout_6" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum1/Layout_7.jpg" alt="Layout_7" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum1/Layout_8.jpg" alt="Layout_8" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum1/Layout_9.jpg" alt="Layout_9" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum1/Layout_10.jpg" alt="Layout_10" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum1/Layout_11.jpg" alt="Layout_11" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum1/Layout_12.jpg" alt="Layout_12" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum1/Layout_13.jpg" alt="Layout_13" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum1/Layout_14.jpg" alt="Layout_14" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum1/Layout_15.jpg" alt="Layout_15" /></a>
+                                </div>
+
+                            </div>
+                            <nav>
+                                <a id="bb-nav-first_1" href="#" class="bb-custom-icon bb-custom-icon-first">First
+                                    page</a>
+                                <a id="bb-nav-prev_1" href="#"
+                                    class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
+                                <a id="bb-nav-next_1" href="#"
+                                    class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
+                                <a id="bb-nav-last_1" href="#" class="bb-custom-icon bb-custom-icon-last">Last page</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-ablum col-lg-6 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.6s">
+                    <a id="ablum2" class="ablum-popup">
+                        <div class="box-text-ablum">
+                            <h3>浪漫 - 傳統</h3>
+                            <p>"在紅色的映襯下，愛情永恆"</p>
+                        </div>
+                        <div class="box-ablum-image-container">
+                            <div class="box-ablum-image box-ablum-image-2 wow shakeX" data-wow-duration="1.3s"
+                                data-wow-delay="0.6s">
+                                <img src="assets/images/album-2.png" alt="ablum">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="popup-ablum2" class="popup-ablum mfp-hide">
+                    <div class="main clearfix">
+                        <div class="bb-custom-wrapper">
+                            <div id="bb-bookblock_2" class="bb-bookblock">
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum2/Layout_1.jpg" alt="Layout_1" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum2/Layout_2.jpg" alt="Layout_2" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum2/Layout_3.jpg" alt="Layout_3" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum2/Layout_4.jpg" alt="Layout_4" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum2/Layout_5.jpg" alt="Layout_5" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum2/Layout_6.jpg" alt="Layout_6" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum2/Layout_7.jpg" alt="Layout_7" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum2/Layout_8.jpg" alt="Layout_8" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum2/Layout_9.jpg" alt="Layout_9" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum2/Layout_10.jpg" alt="Layout_10" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum2/Layout_11.jpg" alt="Layout_11" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum2/Layout_12.jpg" alt="Layout_12" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum2/Layout_13.jpg" alt="Layout_13" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum2/Layout_14.jpg" alt="Layout_14" /></a>
+                                </div>
+                                <div class="bb-item">
+                                    <a><img src="assets/images/Ablum2/Layout_15.jpg" alt="Layout_15" /></a>
+                                </div>
+                            </div>
+                            <nav>
+                                <a id="bb-nav-first_2" href="#" class="bb-custom-icon bb-custom-icon-first">First
+                                    page</a>
+                                <a id="bb-nav-prev_2" href="#"
+                                    class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
+                                <a id="bb-nav-next_2" href="#"
+                                    class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
+                                <a id="bb-nav-last_2" href="#" class="bb-custom-icon bb-custom-icon-last">Last page</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--====== ABLUM PART ENDS ======-->
 
     <!--====== EVENT PART START ======-->
 
@@ -699,7 +764,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section_title text-center pb-30">
-                        <h3 class="title">Weeding Events</h3>
+                        <h3 class="title">婚慶活動</h3>
                         <img src="assets/images/section_shape.png" alt="Shape">
                     </div> <!-- section title -->
                 </div>
@@ -711,11 +776,10 @@
                             <img src="assets/images/event-1.jpg" alt="event">
                         </div>
                         <div class="event_content">
-                            <span class="date">06 Oct 2024</span>
-                            <h3 class="event_title"><a href="#">Lễ Dạm Ngõ</a></h3>
-                            <p>Đường xa chẳng ngại, nhà trai về Quảng Ngãi mang theo hồi hộp, yêu thương và lời hứa gắn kết hai trái tim bằng một lời dạm ngõ ấm lòng.
-                                Một cuộc gặp gỡ không quá rình rang, nhưng đủ đầy ấm áp.
-                                Từ đây, mọi điều tốt đẹp sẽ bắt đầu — cùng nhau.</p>
+                            <span class="date">2024年10月6日</span>
+                            <h3 class="event_title"><a href="#">訂婚儀式</a></h3>
+                            <p>漫长的旅程并不可怕，新郎带着紧张、爱与承诺回到广南，用一份温暖的订婚仪式将两颗心紧紧相连。
+                                这次相遇并不张扬，却温暖而充实。 从此，所有美好的事情都将开始—起。</p>
                         </div>
                     </div> <!-- single event -->
                 </div>
@@ -725,12 +789,10 @@
                             <img src="assets/images/event-2.jpg" alt="event">
                         </div>
                         <div class="event_content">
-                            <span class="date">21 Nov 2025</span>
-                            <h3 class="event_title"><a href="#">Lễ Vu Quy</a></h3>
-                            <p>Vu Quy – ngày em chính thức trở thành người đồng hành trọn đời của anh,
-                                Mà còn là ngày em mang theo tất cả yêu thương, dặn dò và cả nước mắt của mẹ cha,
-                                để bắt đầu một chương mới – làm dâu, làm vợ, người giữ lửa cho một mái ấm mới,...</p>
-                            </div>
+                            <span class="date">2025年11月21日</span>
+                            <h3 class="event_title"><a href="#">出嫁儀式</a></h3>
+                            <p>出嫁仪式是你正式成为我终身伴侣的日子。你带着满满的爱、父母的叮嘱和泪水，开启了人生的新篇章。成为儿媳、成为妻子，为这个新家点燃希望的火焰，迎接未来的幸福生活。</p>
+                        </div>
                     </div> <!-- single event -->
                 </div>
                 <div class="col-lg-4 col-md-7">
@@ -739,12 +801,12 @@
                             <img src="assets/images/event-3.jpg" alt="event">
                         </div>
                         <div class="event_content">
-                            <span class="date">29 Nov 2025</span>
-                            <h3 class="event_title"><a href="#">Lễ Thành Hôn</a></h3>
-                            <p>Lễ Thành Hôn – ngày hai chúng mình chính thức về chung một nhà,
-                                không chỉ để xây dựng tổ ấm mà còn để sẻ chia mọi niềm vui, thử thách trong cuộc sống.
-                                Từ hôm nay, ta sẽ cùng nhau cười nhiều hơn, yêu thương nhiều hơn,
-                                và cùng nắm tay đi qua mọi cung bậc của cuộc đời.</p>                           
+                            <span class="date">2025年11月29日</span>
+                            <h3 class="event_title"><a href="#">婚禮儀式</a></h3>
+                            <p>婚礼仪式 - 这是我们正式步入婚姻殿堂的日子，
+                                不仅是为了建立一个温暖的家，更是为了分享生活中的每一个快乐与挑战。
+                                从今天起，我们将一起欢笑、一起相爱，
+                                手牵手走过人生的每一个阶段。</p>
                         </div>
                     </div> <!-- single event -->
                 </div>
@@ -753,8 +815,9 @@
     </section>
 
     <!--====== EVENT PART ENDS ======-->
+
     <!--====== TESTIMONIAL ======-->
-    <section id="testimonial" class="testimonial_area pt-120 pb-130" style="display:none">
+    <section id="testimonial" class="testimonial_area pt-120 pb-130" style="display: none;">
         <div class="testimonial_shape_1">
             <img src="assets/images/shape-1.png" alt="shape">
         </div>
@@ -818,9 +881,10 @@
         </div>
     </section>
     <!--====== END TESTIMONIAL ======-->
+
     <!--====== CONTACT PART START ======-->
 
-    <section id="contact" class="contact_area pt-130 pb-130" style="display:none">
+    <section id="contact" class="contact_area pt-130 pb-130" style="display: none;">
         <div class="container">
             <div class="contact_wrapper wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.4s">
                 <div class="row justify-content-center">
@@ -871,7 +935,9 @@
             </div>
         </div>
     </section>
+
     <!--====== CONTACT PART ENDS ======-->
+
     <!--====== FOOTER PART START ======-->
 
     <footer id="footer" class="footer_area">
@@ -885,23 +951,21 @@
                     <a href="#"><img src="assets/images/logo-2.png" alt="logo"></a>
                 </div>
                 <div class="footer_title">
-                    <h3 class="title">Bá Đông <span> & </span> Thanh Thảo</h3>
+                    <h3 class="title">李柏東 <span>&</span> 杜氏青草</h3>
                 </div>
                 <ul class="footer_menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Couple</a></li>
-                    <li><a href="#">Story</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Event</a></li>
-                    <li><a href="#">RSVP</a></li>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#couple">新人</a></li>
+                    <li><a href="#our_love">爱情故事</a></li>
+                    <li><a href="#gallery">相册</a></li>
+                    <li><a href="#ablum">专辑</a></li>
+                    <li><a href="#event">婚礼活动</a></li>
                 </ul>
             </div> <!-- footer content -->
             <div class="footer_copyright text-center">
-                <p>Designed and Developed by <a href="https://www.facebook.com/donglb97" style="color: #D59A57"
-                        rel="nofollow">Bá Đông </a>
-                        <span> & </span>
-                        <a href="https://www.facebook.com/thaodtt97/" style="color: #D59A57"
-                        rel="nofollow">Thanh Thảo</a>
+                <p>設計與開發者<a href="https://www.facebook.com/donglb97" style="color: #D59A57" rel="nofollow">李柏東</a>
+                    <span> & </span>
+                    <a href="https://www.facebook.com/thaodtt97/" style="color: #D59A57" rel="nofollow">杜氏青草</a>
                 </p>
             </div>
         </div> <!-- container -->
@@ -911,7 +975,7 @@
 
     <!--====== BACK TOP TOP PART START ======-->
 
-    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <a id="TopPage" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
 
     <!--====== BACK TOP TOP PART ENDS ======-->
 
@@ -946,12 +1010,11 @@
             </span>
         </div>
     </div>
-    <audio style="display: none;" id="audio-music" src="../assets/music/wedding.mp3"></audio>
+    <audio style="display: none;" id="audio-music" src="assets/music/wedding.mp3"></audio>
 
     <!--====== player ENDS ======-->
 
     <!-- row -->
-
 
 
 
@@ -969,7 +1032,6 @@
     <script src="assets/js/lightgallery.min.js"></script>
     <script src="assets/js/lg-thumbnail.min.js"></script>
     <script src="assets/js/lg-zoom.min.js"></script>
-    <script src="assets/js/masonry.min.js"></script>
     <script src="assets/js/jquery-plugin-collection.js"></script>
 
 
@@ -983,6 +1045,14 @@
     <!--====== heart fall js ======-->
     <script src='assets/js/snowfall.jquery.min.js'></script>
     <script src='assets/js/snowfall.min.js'></script>
+
+    <!--====== wow js ======-->
+    <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.6.0/dist/panzoom.min.js"></script>
+
+    <!--====== Book js ======-->
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="assets/js/jquerypp.custom.js"></script>
+    <script src="assets/js/jquery.bookblock.min.js"></script>
 
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
