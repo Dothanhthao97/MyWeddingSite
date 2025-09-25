@@ -1,18 +1,29 @@
 @import url("../css/GreatVibes.css");
 @font-face {
-  font-family: "Ma Shan Zheng";
-  src: url("./fonts/MaShanZheng-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  font-family: "ChineseFont1";
+  src: url("../fonts/ChineseFont_1.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ChineseFont_2";
+  src: url("../fonts/ChineseFont_1.ttf") format("truetype");
+  font-size: normal;
+  font-weight: 100;
 }
 /*===========================
      01.COMMON css 
 ===========================*/
-body {
-  font-family: "Poppins", sans-serif;
+body.lang-vi {
+  font-family: "Poppins", sans-serif !important;
   font-weight: normal;
+}
+
+body.lang-zh {
+  font-family: "ChineseFont_2" !important;
+  font-weight: 100;
+}
+
+body {
   font-style: normal;
-  color: #747E88;
 }
 
 * {
@@ -78,7 +89,8 @@ body.lang-zh h3,
 body.lang-zh h4,
 body.lang-zh h5,
 body.lang-zh h6 {
-  font-family: "Noto Sans SC", "Microsoft Yahei", sans-serif;
+  font-family: "ChineseFont1";
+  font-weight: 100;
 }
 
 h1 {
@@ -414,14 +426,16 @@ p {
   background-color: rgba(255, 255, 255, 0.07);
 }
 
-.sticky, .header_navbar_gallery {
+.sticky,
+.header_navbar_gallery {
   position: fixed;
   z-index: 99;
   background-color: #fff;
   box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease-out 0s;
 }
-.sticky .navbar, .header_navbar_gallery .navbar {
+.sticky .navbar,
+.header_navbar_gallery .navbar {
   padding: 10px 0;
 }
 
@@ -515,15 +529,21 @@ p {
   }
 }
 .navbar-nav .nav-item a {
-  font-size: 16px;
   font-weight: 400;
   color: #fff;
   transition: all 0.3s ease-out 0s;
   padding: 10px 0;
   position: relative;
-  font-family: "Poppins", sans-serif;
   position: relative;
   cursor: pointer;
+}
+body.lang-vi .navbar-nav .nav-item a {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+body.lang-zh .navbar-nav .nav-item a {
+  font-family: "ChineseFont_2";
+  font-size: 18px;
 }
 .navbar-nav .nav-item a.changelang {
   background: url(../images/china.png) no-repeat;
@@ -660,13 +680,17 @@ p {
   top: -5px;
 }
 
-.sticky .navbar-toggler .toggler-icon, .header_navbar_gallery .navbar-toggler .toggler-icon {
+.sticky .navbar-toggler .toggler-icon,
+.header_navbar_gallery .navbar-toggler .toggler-icon {
   background-color: #38424D;
 }
-.sticky .navbar-nav .nav-item a, .header_navbar_gallery .navbar-nav .nav-item a {
+.sticky .navbar-nav .nav-item a,
+.header_navbar_gallery .navbar-nav .nav-item a {
   color: #38424D;
 }
-.sticky .navbar-nav .nav-item.active > a, .sticky .navbar-nav .nav-item:hover > a, .header_navbar_gallery .navbar-nav .nav-item.active > a, .header_navbar_gallery .navbar-nav .nav-item:hover > a {
+.sticky .navbar-nav .nav-item.active > a, .sticky .navbar-nav .nav-item:hover > a,
+.header_navbar_gallery .navbar-nav .nav-item.active > a,
+.header_navbar_gallery .navbar-nav .nav-item:hover > a {
   color: #D59A57;
 }
 
@@ -707,25 +731,41 @@ p {
   padding-top: 80px;
 }
 .slider_content .slider_sub_title {
-  font-size: 30px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
   color: #fff;
 }
+body.lang-vi .slider_content .slider_sub_title {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+body.lang-zh .slider_content .slider_sub_title {
+  font-family: "ChineseFont_2";
+  font-size: 60px;
+  font-weight: 100;
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .slider_content .slider_sub_title {
+  body.lang-vi .slider_content .slider_sub_title {
     font-size: 24px;
+  }
+  body.lang-zh .slider_content .slider_sub_title {
+    font-size: 45px;
   }
 }
 @media (max-width: 767px) {
-  .slider_content .slider_sub_title {
+  body.lang-vi .slider_content .slider_sub_title {
     font-size: 18px;
+  }
+  body.lang-zh .slider_content .slider_sub_title {
+    font-size: 30px;
   }
 }
 .slider_content .slider_title {
   font-size: 112px;
   color: #fff;
   margin-top: 15px;
+}
+body.lang-zh .slider_content .slider_title {
+  font-weight: 100;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .slider_content .slider_title {
@@ -752,19 +792,33 @@ p {
   color: #D59A57;
 }
 .slider_content .location {
-  font-size: 30px;
-  font-weight: 600;
   color: #fff;
   margin-top: 35px;
 }
+body.lang-vi .slider_content .location {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+body.lang-zh .slider_content .location {
+  font-family: "ChineseFont_2";
+  font-size: 60px;
+  font-weight: 100;
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .slider_content .location {
+  body.lang-vi .slider_content .location {
     font-size: 24px;
+  }
+  body.lang-zh .slider_content .location {
+    font-size: 35px;
   }
 }
 @media (max-width: 767px) {
-  .slider_content .location {
+  body.lang-vi .slider_content .location {
     font-size: 18px;
+  }
+  body.lang-zh .slider_content .location {
+    font-size: 24px;
   }
 }
 .slider_content p {
@@ -1068,7 +1122,8 @@ body.lang-vi .coming_soon_count .single_count .count_content .count {
   font-family: "Great Vibes";
 }
 body.lang-zh .coming_soon_count .single_count .count_content .count {
-  font-family: "Noto Sans SC", "Microsoft Yahei", sans-serif;
+  font-family: "ChineseFont1";
+  font-weight: 100;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .coming_soon_count .single_count .count_content .count {
@@ -1544,7 +1599,13 @@ body:has(.lg-start-zoom) {
   position: relative;
   transition: 0.5s;
   font-size: 40px;
+}
+body.lang-vi .box-see-more a span {
   font-family: "Great Vibes";
+}
+body.lang-zh .box-see-more a span {
+  font-family: "ChineseFont1";
+  font-weight: 100;
 }
 
 .box-see-more a i {
@@ -1832,11 +1893,16 @@ body:has(.lg-start-zoom) {
   background-color: #fff;
 }
 .single_testimonial .testimonial_content .author_name {
-  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 600;
   color: #38424D;
   margin-top: 20px;
+}
+body.lang-vi .single_testimonial .testimonial_content .author_name {
+  font-family: "Poppins", sans-serif;
+}
+body.lang-zh .single_testimonial .testimonial_content .author_name {
+  font-family: "ChineseFont_2";
 }
 .single_testimonial .testimonial_content .sub_title {
   color: #747E88;

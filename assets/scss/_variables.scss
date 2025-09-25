@@ -1,15 +1,22 @@
 @font-face {
-  font-family: 'Ma Shan Zheng';
-  src: url('./fonts/MaShanZheng-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'ChineseFont1';
+  src: url('../fonts/ChineseFont_1.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ChineseFont_2';
+  src: url('../fonts/ChineseFont_1.ttf') format('truetype');
+  font-size: normal;
+  font-weight: 100;
 }
 
 // Font Family
 $font-1: 'Great Vibes';
 $font-2: 'Poppins', sans-serif;
 
-$font-zh: 'Noto Sans SC', 'Microsoft Yahei', sans-serif;
+$font-zh-1: 'ChineseFont1';
+$font-zh-2: 'ChineseFont_2';
+//$font-zh-2: 'Noto Sans SC', 'Microsoft Yahei', sans-serif;
 
 
 // Colors ---------------

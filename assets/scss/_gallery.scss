@@ -249,7 +249,17 @@ body:has(.lg-start-zoom) {
     position: relative;
     transition: 0.5s;
     font-size: 40px;
-    font-family: "Great Vibes";
+
+    body.lang-vi & {
+        font-family: $font-1; // Great Vibes, font tiếng Việt
+    }
+
+    // Nếu là tiếng Trung
+    body.lang-zh & {
+        font-family: $font-zh-1; // font hỗ trợ tiếng Trung, ví dụ 'Noto Sans SC'
+        font-weight: 100;
+    }
+
 }
 
 .box-see-more a i {

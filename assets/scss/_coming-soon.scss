@@ -103,7 +103,8 @@
 
                 // Nếu là tiếng Trung
                 body.lang-zh & {
-                    font-family: $font-zh; // font hỗ trợ tiếng Trung, ví dụ 'Noto Sans SC'
+                    font-family: $font-zh-1; // font hỗ trợ tiếng Trung, ví dụ 'Noto Sans SC'
+                    font-weight: 100;
                 }
 
                 @media #{$lg} {

@@ -1,49 +1,45 @@
-
-
-
 /*===========================
     09.TESTIMONIAL css 
 ===========================*/
 
 
-.testimonial_area{
+.testimonial_area {
     background-color: $gray;
     position: relative;
     overflow: hidden;
     z-index: 9;
 }
 
-.testimonial_shape_1{
+.testimonial_shape_1 {
     position: absolute;
     bottom: -30px;
     left: 0;
     z-index: -1;
-    
-    & img{
-         width: 130px;
-         opacity: 0.31;
+
+    & img {
+        width: 130px;
+        opacity: 0.31;
     }
 }
-.testimonial_shape_2{
+
+.testimonial_shape_2 {
     position: absolute;
     top: -30px;
     right: 0;
     z-index: -1;
-    
-    & img{
-         width: 130px;
-         opacity: 0.31;
+
+    & img {
+        width: 130px;
+        opacity: 0.31;
     }
 }
 
-.testimonial_wrapper{
-    
-}
+.testimonial_wrapper {}
 
 
-.single_testimonial{
-    & .testimonial_author{
-        & img{
+.single_testimonial {
+    & .testimonial_author {
+        & img {
             border-radius: 50%;
             padding: 5px;
             @include box-shadow (0px 3px 13px 0px rgba($theme-color, 0.35));
@@ -51,18 +47,28 @@
             background-color: $white;
         }
     }
-    & .testimonial_content{
-        & p{
-            
-        }
-        & .author_name{
-            font-family: $font-2;
+
+    & .testimonial_content {
+
+        & .author_name {
+
+            // Nếu là tiếng Việt
+            body.lang-vi & {
+                font-family: $font-2; // Great Vibes, font tiếng Việt
+            }
+
+            // Nếu là tiếng Trung
+            body.lang-zh & {
+                font-family: $font-zh-2; // font hỗ trợ tiếng Trung, ví dụ 'Noto Sans SC'
+            }
+
             font-size: 18px;
             font-weight: 600;
             color: $black;
             margin-top: 20px;
         }
-        & .sub_title{
+
+        & .sub_title {
             color: $body-color;
             margin-top: 5px;
         }
@@ -70,23 +76,24 @@
 }
 
 
-.testimonial_wrapper{
-    
-    & .slick-arrow{
+.testimonial_wrapper {
+
+    & .slick-arrow {
         position: absolute;
         top: 50%;
         left: -150px;
         z-index: 9;
         @include transition(0.3s);
-        
-        @media #{$md}{
+
+        @media #{$md} {
             left: -80px;
         }
-        @media #{$sm}{
+
+        @media #{$sm} {
             left: -45px;
         }
-        
-        & i{
+
+        & i {
             width: 50px;
             height: 50px;
             line-height: 46px;
@@ -97,46 +104,40 @@
             border-radius: 50%;
             cursor: pointer;
             @include transition(0.3s);
-            
-            @media #{$md}{
+
+            @media #{$md} {
                 width: 40px;
                 height: 40px;
                 line-height: 36px;
                 font-size: 20px;
             }
-            @media #{$sm}{
+
+            @media #{$sm} {
                 width: 40px;
                 height: 40px;
                 line-height: 36px;
                 font-size: 20px;
             }
         }
-        
-        &:hover{
-            & i{
+
+        &:hover {
+            & i {
                 color: $theme-color;
                 border-color: $theme-color;
             }
         }
-        
-        &.next{
+
+        &.next {
             right: -150px;
             left: auto;
-            
-            @media #{$md}{
+
+            @media #{$md} {
                 right: -80px;
             }
-            @media #{$sm}{
+
+            @media #{$sm} {
                 right: -45px;
             }
         }
     }
 }
-
-
-
-
-
-
-
-

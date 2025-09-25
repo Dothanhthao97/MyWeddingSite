@@ -5,12 +5,20 @@
 
 @import url('../css/GreatVibes.css');
 
-body {
-    font-family: $font-2;
+body.lang-vi {
+    font-family: $font-2 !important; // Ví dụ: 'Great Vibes'
     font-weight: normal;
-    font-style: normal;
-    color: $body-color;
 }
+
+body.lang-zh {
+    font-family: $font-zh-2 !important; // Ví dụ: 'Noto Sans SC'
+    font-weight: 100;
+}
+
+body {
+    font-style: normal;
+}
+
 
 * {
     margin: 0;
@@ -66,7 +74,8 @@ h6 {
 
     // Nếu là tiếng Trung
     body.lang-zh & {
-        font-family: $font-zh; // font hỗ trợ tiếng Trung, ví dụ 'Noto Sans SC'
+        font-family: $font-zh-1; // font hỗ trợ tiếng Trung, ví dụ 'Noto Sans SC'
+        font-weight: 100;
     }
 
     font-weight: 700;
