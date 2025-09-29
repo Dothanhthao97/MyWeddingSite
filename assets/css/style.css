@@ -1,12 +1,12 @@
 @import url("../css/GreatVibes.css");
 @font-face {
   font-family: "ChineseFont1";
-  src: url("../fonts/ChineseFont_1.woff") format("woff2");
+  src: url("../fonts/ChineseFont_1.woff2") format("woff2");
 }
 @font-face {
   font-family: "ChineseFont2";
-  src: url("../fonts/ChineseFont_2.woff") format("woff2");
-  font-size: normal;
+  src: url("../fonts/ChineseFont_2.woff2") format("woff2");
+  font-size: 18px;
   font-weight: 100;
 }
 /*===========================
