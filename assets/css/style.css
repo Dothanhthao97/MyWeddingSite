@@ -1,11 +1,11 @@
 @import url("../css/GreatVibes.css");
 @font-face {
   font-family: "ChineseFont1";
-  src: url("../fonts/ChineseFont_1.ttf") format("truetype");
+  src: url("../fonts/ChineseFont_1.woff") format("woff2");
 }
 @font-face {
-  font-family: "ChineseFont_2";
-  src: url("../fonts/ChineseFont_1.ttf") format("truetype");
+  font-family: "ChineseFont2";
+  src: url("../fonts/ChineseFont_2.woff") format("woff2");
   font-size: normal;
   font-weight: 100;
 }
@@ -18,7 +18,7 @@ body.lang-vi {
 }
 
 body.lang-zh {
-  font-family: "ChineseFont_2" !important;
+  font-family: "ChineseFont2" !important;
   font-weight: 100;
 }
 
@@ -542,7 +542,7 @@ body.lang-vi .navbar-nav .nav-item a {
   font-size: 16px;
 }
 body.lang-zh .navbar-nav .nav-item a {
-  font-family: "ChineseFont_2";
+  font-family: "ChineseFont2";
   font-size: 18px;
 }
 .navbar-nav .nav-item a.changelang {
@@ -739,7 +739,7 @@ body.lang-vi .slider_content .slider_sub_title {
   font-weight: 600;
 }
 body.lang-zh .slider_content .slider_sub_title {
-  font-family: "ChineseFont_2";
+  font-family: "ChineseFont2";
   font-size: 60px;
   font-weight: 100;
 }
@@ -801,7 +801,7 @@ body.lang-vi .slider_content .location {
   font-weight: 600;
 }
 body.lang-zh .slider_content .location {
-  font-family: "ChineseFont_2";
+  font-family: "ChineseFont2";
   font-size: 60px;
   font-weight: 100;
 }
@@ -1902,7 +1902,7 @@ body.lang-vi .single_testimonial .testimonial_content .author_name {
   font-family: "Poppins", sans-serif;
 }
 body.lang-zh .single_testimonial .testimonial_content .author_name {
-  font-family: "ChineseFont_2";
+  font-family: "ChineseFont2";
 }
 .single_testimonial .testimonial_content .sub_title {
   color: #747E88;
