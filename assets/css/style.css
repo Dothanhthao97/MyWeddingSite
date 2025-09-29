@@ -341,13 +341,18 @@ p {
   align-items: center;
   border: 1px solid #ccc;
   color: ccc;
-  font-family: "Poppins", sans-serif;
+  font-family: "ChineseFont2";
   cursor: pointer;
   box-shadow: 0 4px 16px rgba(213, 154, 87, 0.08);
   transition: all 0.2s;
   justify-content: center;
   font-size: 16px;
   font-weight: bold;
+}
+
+.language-option.fontChina {
+  font-size: 20px;
+  font-weight: 100;
 }
 
 .language-option:hover,
