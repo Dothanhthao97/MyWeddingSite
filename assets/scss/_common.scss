@@ -383,7 +383,52 @@ p {
     box-shadow: 0 8px 24px rgba(213, 154, 87, 0.18);
 }
 
-
+.carousel {
+    .carousel-control-next, .carousel-control-prev{
+        z-index: 100;
+    }
+    .carousel-item .single_slider{
+        background-repeat: no-repeat;
+        //ba: center center/cover no-repeat local;
+    }
+    .carousel-item1 .single_slider{
+        background-position: left 63% bottom 10%;
+    }
+    .carousel-item2 .single_slider{
+        background-position: top 0 center;
+    }
+    .carousel-item3 .single_slider{
+        background-position: bottom 10% center;
+    }
+    .carousel-item4 .single_slider{
+        background-position:bottom 30% center;
+    }
+    .carousel-item5 .single_slider{
+        background-position: top -80px center;
+    }
+    
+     @media #{$xs} {
+        .carousel-control-next, .carousel-control-prev {
+            width: 30px;
+        }
+        .carousel-item1 .single_slider{
+            background-position: left 63% center;
+        }
+        .carousel-item2 .single_slider{
+            background-position: left 28% top;
+        }
+        .carousel-item3 .single_slider{
+            background-position: left 43% bottom;
+        }
+        .carousel-item4 .single_slider{
+            background-position: left 56% top;
+        }
+         .carousel-item5 .single_slider{
+            background-position: left 45% top;
+        }
+    }
+    
+}
 /* Preloader Animations*/
 
 @-webkit-keyframes ytp-spinner-linspin {

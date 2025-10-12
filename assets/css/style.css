@@ -363,6 +363,48 @@ p {
   box-shadow: 0 8px 24px rgba(213, 154, 87, 0.18);
 }
 
+.carousel .carousel-control-next, .carousel .carousel-control-prev {
+  z-index: 100;
+}
+.carousel .carousel-item .single_slider {
+  background-repeat: no-repeat;
+}
+.carousel .carousel-item1 .single_slider {
+  background-position: left 63% bottom 10%;
+}
+.carousel .carousel-item2 .single_slider {
+  background-position: top 0 center;
+}
+.carousel .carousel-item3 .single_slider {
+  background-position: bottom 10% center;
+}
+.carousel .carousel-item4 .single_slider {
+  background-position: bottom 30% center;
+}
+.carousel .carousel-item5 .single_slider {
+  background-position: top -80px center;
+}
+@media (max-width: 767px) {
+  .carousel .carousel-control-next, .carousel .carousel-control-prev {
+    width: 30px;
+  }
+  .carousel .carousel-item1 .single_slider {
+    background-position: left 63% center;
+  }
+  .carousel .carousel-item2 .single_slider {
+    background-position: left 28% top;
+  }
+  .carousel .carousel-item3 .single_slider {
+    background-position: left 43% bottom;
+  }
+  .carousel .carousel-item4 .single_slider {
+    background-position: left 56% top;
+  }
+  .carousel .carousel-item5 .single_slider {
+    background-position: left 45% top;
+  }
+}
+
 /* Preloader Animations*/
 @keyframes ytp-spinner-linspin {
   to {
@@ -428,7 +470,6 @@ p {
   width: 100%;
   z-index: 99;
   transition: all 0.3s ease-out 0s;
-  background-color: rgba(255, 255, 255, 0.07);
 }
 
 .sticky,
