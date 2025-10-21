@@ -1855,6 +1855,7 @@ body.lang-zh .box-see-more a span {
   overflow: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  height: 480px;
 }
 .single_event .event_image img {
   width: 100%;
