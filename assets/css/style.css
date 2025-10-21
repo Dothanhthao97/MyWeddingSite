@@ -1,7 +1,12 @@
+@charset "UTF-8";
 @import url("../css/GreatVibes.css");
 @font-face {
   font-family: "ChineseFont1";
   src: url("../fonts/ChineseFont_1.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ChineseFont1_1";
+  src: url("../fonts/ChineseFont_1_1.woff2") format("woff2");
 }
 @font-face {
   font-family: "ChineseFont2";
@@ -89,7 +94,7 @@ body.lang-zh h3,
 body.lang-zh h4,
 body.lang-zh h5,
 body.lang-zh h6 {
-  font-family: "ChineseFont1";
+  font-family: "ChineseFont1", "ChineseFont1_1";
   font-weight: 100;
 }
 
@@ -1168,7 +1173,7 @@ body.lang-vi .coming_soon_count .single_count .count_content .count {
   font-family: "Great Vibes";
 }
 body.lang-zh .coming_soon_count .single_count .count_content .count {
-  font-family: "ChineseFont1";
+  font-family: "ChineseFont1", "ChineseFont1_1";
   font-weight: 100;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -1650,7 +1655,7 @@ body.lang-vi .box-see-more a span {
   font-family: "Great Vibes";
 }
 body.lang-zh .box-see-more a span {
-  font-family: "ChineseFont1";
+  font-family: "ChineseFont1", "ChineseFont1_1";
   font-weight: 100;
 }
 
@@ -1848,14 +1853,68 @@ body.lang-zh .box-see-more a span {
   box-sizing: border-box;
 }
 
+/*Map-Area*/
+.map_area {
+  margin-top: 50px;
+  padding-top: 80px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  background: #fff;
+}
+
+/* hiệu ứng khi hover toàn vùng map */
+.map_area:hover {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ảnh bên trong map */
+.map_area .map_image img {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.6s ease-in-out, filter 0.6s ease-in-out;
+}
+
+/* hiệu ứng nhịp thở nhẹ + sáng màu */
+.map_area:hover .map_image img {
+  animation: gentleZoom 2s ease-in-out infinite;
+}
+
+@keyframes gentleZoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+/* thêm ánh sáng pastel ở viền */
+.map_area::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: radial-gradient(circle at top right, rgba(255, 182, 193, 0.2), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.map_area:hover::after {
+  opacity: 1;
+}
+
 /*===========================
      07.EVENT css 
 ===========================*/
 .single_event .event_image {
+  height: 450px;
   overflow: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  height: 480px;
 }
 .single_event .event_image img {
   width: 100%;

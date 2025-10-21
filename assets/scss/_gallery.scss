@@ -491,22 +491,63 @@ body:has(.lg-start-zoom) {
     box-sizing: border-box;
 }
 
+/*Map-Area*/
 
-// .popup-ablum .mfp-close {
-//   color: #fff !important;
-//   background: rgba(80,80,80,0.7) !important;
-//   border-radius: 50%;
-//   opacity: 1 !important;
-//   font-size: 32px !important;
-//   width: 48px;
-//   height: 48px;
-//   right: 16px !important;
-//   top: 16px !important;
-//   text-align: center;
-//   line-height: 48px;
-//   transition: background 0.2s;
-// }
-// .popup-ablum .mfp-close:hover {
-//   background: #fff !important;
-//   color: #333 !important;
-// }
+
+.map_area {
+    margin-top: 50px;
+    padding-top: 80px;
+
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    background: #fff;
+}
+
+/* hiệu ứng khi hover toàn vùng map */
+.map_area:hover {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ảnh bên trong map */
+.map_area .map_image img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.6s ease-in-out, filter 0.6s ease-in-out;
+}
+
+/* hiệu ứng nhịp thở nhẹ + sáng màu */
+.map_area:hover .map_image img {
+    animation: gentleZoom 2s ease-in-out infinite;
+}
+
+@keyframes gentleZoom {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+/* thêm ánh sáng pastel ở viền */
+.map_area::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    background: radial-gradient(circle at top right, rgba(255, 182, 193, 0.2), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.map_area:hover::after {
+    opacity: 1;
+}

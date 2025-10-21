@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: 'ChineseFont1_1';
+  src: url('../fonts/ChineseFont_1_1.woff2') format('woff2');
+}
+
+@font-face {
   font-family: 'ChineseFont2';
   src: url('../fonts/ChineseFont_2.woff2') format('woff2');
   font-size: 18px;
@@ -14,7 +19,7 @@
 $font-1: 'Great Vibes';
 $font-2: 'Poppins', sans-serif;
 
-$font-zh-1: 'ChineseFont1';
+$font-zh-1: 'ChineseFont1', 'ChineseFont1_1';
 $font-zh-2: 'ChineseFont2';
 //$font-zh-2: 'Noto Sans SC', 'Microsoft Yahei', sans-serif;
 
